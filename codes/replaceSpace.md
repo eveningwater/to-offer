@@ -33,7 +33,7 @@ var replaceSpace = function (s) {
 var replaceSpace = function (s) {
     let len = s.length,index = 0,array = new Array(len * 3);
     for(let i = 0;i < len;i++){
-        if(s[i] === ""){
+        if(s[i] === " "){
             array[index] = "%";
             array[index + 1] = "2";
             array[index + 2] = "0";
@@ -44,7 +44,7 @@ var replaceSpace = function (s) {
         }
     }
     // 从0开始截取到index索引的字符数组即为替换后的字符串，然后调用join方法转成字符串，注意这里的参数必须是空字符串。
-    return array.slice(0,index).join(" ");
+    return array.slice(0,index).join("");
 };
 ```
 
