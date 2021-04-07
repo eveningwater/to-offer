@@ -1,4 +1,4 @@
-![logo](../images/icon.svg)
+![logo](/images/icon.svg)
 
 # 剑指offer算法题
 
