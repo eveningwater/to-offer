@@ -49,7 +49,7 @@ var fib = function(n) {
 
 以上算法的时间复杂度和空间复杂度见下图:
 
-![递归法](https://pic.leetcode-cn.com/25e913ab8d7a22bb017669e4a097cf51d10861f365002f2d8556ee7a64464cd8-Picture0.png)
+![递归法](../images/fib-2.png)
 
 - 方法二：动态规划
 
@@ -68,7 +68,7 @@ var fib = function(n) {
 
 节省了 arr 列表空间，因此空间复杂度降至 O(1) 。如下图所示:
 
-![](https://pic.leetcode-cn.com/f653118d5c80fc44dde284c9b9c4f2d2115916f0123e384733526279f9b23302-Picture1.png)
+![](../images/fib-1.png)
 
 ```js
   var fib = function(n){
