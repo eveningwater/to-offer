@@ -5,3 +5,5 @@
 + [重建二叉树](/codes/buildTree.md)
 + [用两个栈实现队列](/codes/CQueue.md)
 + [斐波那契数列](/codes/fib.md)
++ [青蛙跳台阶问题](/codes/numWays.md)
++ [旋转数组的最小数字](/codes/minArray.md)
