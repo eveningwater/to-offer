@@ -15,3 +15,4 @@
 + [斐波那契数列](/codes/fib.md)
 + [青蛙跳台阶问题](/codes/numWays.md)
 + [旋转数组的最小数字](/codes/minArray.md)
++ [矩阵中的路径](/codes/exist.md)
