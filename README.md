@@ -16,3 +16,4 @@
 + [青蛙跳台阶问题](/codes/numWays.md)
 + [旋转数组的最小数字](/codes/minArray.md)
 + [矩阵中的路径](/codes/exist.md)
++ [机器人的运动范围](/codes/movingCount.md)
