@@ -21,7 +21,7 @@
 ```
 
 
-> 提示：2 <= n <= 58
+> 提示：2 <= n <= 1000
 
 ### 思路分析
 
@@ -52,7 +52,20 @@ var cuttingRope = function(n) {
 };
 //此代码无效，需要计算大数
 ```
+改造后的代码如下:
 
+```js
+const max = (...args) => args.reduce((p, c) => p > c ? p : c);
+var cuttingRope = function (n) {
+    let dp = new Array(n).fill(BigInt(1));
+    for (let i = 0; i < n; i++) {
+        for (let j = i - 1; j >= 0; j--) {
+            dp[i] = max(dp[i], dp[j] * BigInt((i - j)), BigInt((j + 1) * (i - j)));
+        }
+    }
+    return dp[n - 1] % (1000000007n);
+};
+```
 由于用到了2个循环，所以这个算法的时间复杂度为 O(n ^ 2),用了一个数组存储，所以空间复杂度为 O(n)。
 
 - 方法二:贪心算法
