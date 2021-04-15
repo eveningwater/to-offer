@@ -11,3 +11,4 @@
 + [机器人的运动范围](/codes/movingCount.md)
 + [剪绳子](/codes/cuttingRope.md)
 + [剪绳子-二](/codes/cuttingRope-2.md)
++ [二进制中1的个数](/codes/hammingWeight.md)
