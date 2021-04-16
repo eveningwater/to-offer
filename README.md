@@ -20,3 +20,4 @@
 + [剪绳子](/codes/cuttingRope.md)
 + [剪绳子-二](/codes/cuttingRope-2.md)
 + [二进制中1的个数](/codes/hammingWeight.md)
++ [数值的整数次方](/codes/myPow.md)
