@@ -21,3 +21,5 @@
 + [剪绳子-二](/codes/cuttingRope-2.md)
 + [二进制中1的个数](/codes/hammingWeight.md)
 + [数值的整数次方](/codes/myPow.md)
++ [打印从1到最大的n位数](/codes/printNumbers.md)
++ [删除链表的节点](/codes/deleteNode.md)
