@@ -23,3 +23,4 @@
 + [数值的整数次方](/codes/myPow.md)
 + [打印从1到最大的n位数](/codes/printNumbers.md)
 + [删除链表的节点](/codes/deleteNode.md)
++ [调整数组顺序使奇数位于偶数前面](/codes/exchange.md)
