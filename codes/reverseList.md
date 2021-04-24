@@ -33,4 +33,5 @@ var reverseList = function(head) {
 
 该算法的时间复杂度与节点数有关，所以时间复杂度应为 O(n),而空间复杂度为 O(1)。
 
+[更多思路](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/solution/fan-zhuan-lian-biao-by-leetcode-solution-jvs5/)。
 
