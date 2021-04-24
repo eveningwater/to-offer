@@ -17,3 +17,4 @@
 + [删除链表的节点](/codes/deleteNode.md)
 + [调整数组顺序使奇数位于偶数前面](/codes/exchange.md)
 + [链表中倒数第k个节点](/codes/getKthFromEnd.md)
++ [反转链表](/codes/reverseList.md)
