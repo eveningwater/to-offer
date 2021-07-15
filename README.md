@@ -36,3 +36,5 @@
 + [从上到下打印二叉树-1](/codes/levelOrder-1.md)
 + [从上到下打印二叉树-2](/codes/levelOrder-2.md)
 + [从上到下打印二叉树-3](/codes/levelOrder-3.md)
++ [二叉搜索树的后序遍历序列](/codes/verifyPostorder.md)
++ [数字序列中某一位的数字](/codes/findNthDigit.md)
