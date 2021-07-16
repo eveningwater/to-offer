@@ -139,7 +139,7 @@ num = start + (n - 1) / digit = 10 + (6 - 1) / 2 = 12 ->
 ```js
 var findNthDigit = function(n){
     let digit = 1,start = 1,count = 9;
-    while(n <= count){
+    while(n > count){
         n -= count;
         start *= 10;
         digit += 1;
