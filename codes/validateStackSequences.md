@@ -55,6 +55,6 @@ var validateStackSequences = function(pushed, popped) {
 };
 ```
 
-以上算法时间复杂度为O(n ^ 2)，所以空间复杂度为O(n)。
+以上算法时间复杂度为O(n)，所以空间复杂度为O(n)。
 
 [更多思路](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/solution/mian-shi-ti-31-zhan-de-ya-ru-dan-chu-xu-lie-mo-n-2/)。

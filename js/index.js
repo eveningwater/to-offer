@@ -11,22 +11,13 @@ window.$docsify = {
     coverpage: "./pages/coverpage.md",
     autoHeader: true,
     mergeNavbar: true,
-    plugins: [
-        (hook) => {
-            var footer = [
-                '<hr/>',
-                '<footer>',
-                `<p>
-          MIT Licensed | Copyright © 2020-present&nbsp;&nbsp;<a href="https://github.com/eveningwater">eveningwater</a>&nbsp;
-          Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>
-        </p>
-        `,
-                '</footer>'
-            ].join('');
-
-            hook.afterEach(function (html) {
-                return html + footer;
-            });
+    plugins: [(hook) => {
+        var footer = ['<hr/>','<footer>',
+            `<p>
+                MIT Licensed | Copyright © 2020-present&nbsp;&nbsp;<a href="https://github.com/eveningwater">eveningwater</a>&nbsp;
+                Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>
+            </p>`,'</footer>'].join('');
+            hook.afterEach(html => html + footer);
         },
         (hook, vm) => {
             hook.beforeEach(function (html) {
