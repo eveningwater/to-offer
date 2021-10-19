@@ -1,6 +1,6 @@
 ### 二叉树中和为某一值的路径
 
-> 题目:二叉树中和为某一值的路径给你二叉树的根节点 root 和一个整数目标和 targetSum ，找出所有 从根节点到叶子节点 路径总和等于给定目标和的路径。
+> 题目:给你二叉树的根节点 root 和一个整数目标和 targetSum ，找出所有从根节点到叶子节点路径总和等于给定目标和的路径。
 (叶子节点 是指没有子节点的节点)。
 
 示例 1:
@@ -81,5 +81,5 @@ var pathSum = function(root,target) {
 };
 ```
 
-以上算法，时间复杂度是O(n),空间复杂度也为O(n)。
+以上算法，时间复杂度是O(n),空间复杂度也为O(n)。更多详细解题思路参考[题解](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/solution/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-68dg/)。
 
