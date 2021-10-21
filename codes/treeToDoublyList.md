@@ -85,16 +85,16 @@ var treeToDoublyList = function(root) {
     //转化为双向链表
     DFS(root);
     //构建链表
-    pre.right = cur;
     cur.left = pre;
+    pre.right = cur;
     //定义中序遍历函数DFS
     function DFS(node){
         //特别处理，当节点为空时，直接返回
         if(!node){
-            return null;
+            return;
         }
         //递归左子树
-        DFS(root.left);
+        DFS(node.left);
         //构建链表，根据前驱节点来判断
         if(!pre){
             //如果前驱节点为空，代表越过了叶子节点，因此修改当前节点指向为头节点
@@ -108,7 +108,7 @@ var treeToDoublyList = function(root) {
         //更新前驱节点为当前节点
         pre = node;
         //递归右子树
-        DFS(root.right);
+        DFS(node.right);
     }
     //返回头部节点
     return cur;
