@@ -33,4 +33,6 @@
 + [复杂链表的复制](/codes/copyRandomList.md)
 + [二叉搜索树与双向链表](/codes/treeToDoublyList.md)
 + [序列化二叉树](/codes/serializeAndDeserialize.md)
++ [字符串的排列](/codes/permutation.md)
++ [数组中出现次数超过一半的数字](/codes/majorityElement.md)
 + [数字序列中某一位的数字](/codes/findNthDigit.md)
