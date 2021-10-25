@@ -35,4 +35,6 @@
 + [序列化二叉树](/codes/serializeAndDeserialize.md)
 + [字符串的排列](/codes/permutation.md)
 + [数组中出现次数超过一半的数字](/codes/majorityElement.md)
++ [最小的k个数](/codes/getLeastNumbers.md)
++ [数据流中的中位数](/codes/MedianFinder.md)
 + [数字序列中某一位的数字](/codes/findNthDigit.md)
