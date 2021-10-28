@@ -40,3 +40,4 @@
 + [连续子数组的最大和](/codes/maxSubArray.md)
 + [1 ~ n 整数中 1 出现的次数](/codes/countDigitOne.md)
 + [数字序列中某一位的数字](/codes/findNthDigit.md)
++ [把数组排成最小的数](/codes/minNumber.md)
