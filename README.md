@@ -49,3 +49,4 @@
 + [1 ~ n 整数中 1 出现的次数](/codes/countDigitOne.md)
 + [数字序列中某一位的数字](/codes/findNthDigit.md)
 + [把数组排成最小的数](/codes/minNumber.md)
++ [把数字翻译成字符串](/codes/translateNum.md)
