@@ -65,7 +65,7 @@ var translateNum  = function(num) {
 };
 ```
 
-该算法时间复杂度和空间复杂度都是O(M * N)。
+该算法时间复杂度O(log<sup>n</sup>),空间复杂度是O(1)。
 
 [更多思路](https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/solution/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-by-leetcode-sol/)。
 
