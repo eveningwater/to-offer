@@ -42,3 +42,4 @@
 + [数字序列中某一位的数字](/codes/findNthDigit.md)
 + [把数组排成最小的数](/codes/minNumber.md)
 + [把数字翻译成字符串](/codes/translateNum.md)
++ [礼物的最大价值](/codes/maxValue.md)
