@@ -44,3 +44,4 @@
 + [把数字翻译成字符串](/codes/translateNum.md)
 + [礼物的最大价值](/codes/maxValue.md)
 + [最长不含重复字符的子字符串](/codes/lengthOfLongestSubstring.md)
++ [丑数](/codes/nthUglyNumber.md)
