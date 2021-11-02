@@ -45,3 +45,4 @@
 + [礼物的最大价值](/codes/maxValue.md)
 + [最长不含重复字符的子字符串](/codes/lengthOfLongestSubstring.md)
 + [丑数](/codes/nthUglyNumber.md)
++ [第一个只出现一次的字符](/codes/firstUniqChar.md)
