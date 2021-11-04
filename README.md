@@ -55,3 +55,4 @@
 + [丑数](/codes/nthUglyNumber.md)
 + [第一个只出现一次的字符](/codes/firstUniqChar.md)
 + [数组中的逆序对](/codes/reversePairs.md)
++ [两个链表的第一个公共节点](/codes/getIntersectionNode.md)
