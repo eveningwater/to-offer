@@ -30,8 +30,11 @@
 
 1. 终止条件: 当root为空，则代表已越过叶节点，直接返回0。
 2. 递推工作:本质上就是对树做后序遍历。
+
    2.1 计算root节点的左子树的深度，即调用maxDepth(root.left)。
+   
    2.2 计算root节点的右子树的深度，即调用maxDepth(root.right)。
+
 3. 返回值:返回此树的深度。即Math.max(maxDepth(root.left),maxDepth(root.right)) + 1即可。
 
 ```js
