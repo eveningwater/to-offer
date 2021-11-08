@@ -56,4 +56,7 @@
 + [第一个只出现一次的字符](/codes/firstUniqChar.md)
 + [数组中的逆序对](/codes/reversePairs.md)
 + [两个链表的第一个公共节点](/codes/getIntersectionNode.md)
++ [在排序数组中查找数字](/codes/searchNumber.md)
 + [0 ~ n-1中缺失的数字](/codes/missingNumber.md)
++ [二叉搜索树的第k大节点](/codes/kthLargest.md)
++ [二叉树的深度](/codes/maxDepth.md)
