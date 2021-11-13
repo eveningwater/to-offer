@@ -53,3 +53,7 @@
 + [二叉搜索树的第k大节点](/codes/kthLargest.md)
 + [二叉树的深度](/codes/maxDepth.md)
 + [数组中数字出现的次数-1](/codes/singleNumbers-1.md)
++ [数组中数字出现的次数-2](/codes/singleNumbers-2.md)
++ [和为s的两个数字](/codes/twoSum.md)
++ [和为s的连续正数序列](/codes/findContinuousSequence.md)
++ [翻转单词顺序-1](/codes/reverseWords-1.md)
