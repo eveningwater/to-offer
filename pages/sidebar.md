@@ -59,3 +59,5 @@
 + [翻转单词顺序-1](/codes/reverseWords-1.md)
 + [左旋转字符串](/codes/reverseLeftWords.md)
 + [滑动窗口的最大值-1](/codes/maxSlidingWindow-1.md)
++ [队列的最大值](/codes/MaxQueue.md)
++ [n个骰子的点数](/codes/dicesProbability.md)
