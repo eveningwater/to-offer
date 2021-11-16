@@ -61,3 +61,4 @@
 + [滑动窗口的最大值-1](/codes/maxSlidingWindow-1.md)
 + [队列的最大值](/codes/MaxQueue.md)
 + [n个骰子的点数](/codes/dicesProbability.md)
++ [扑克牌中的顺子](/codes/isStraight.md)
