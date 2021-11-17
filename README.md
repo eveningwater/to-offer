@@ -70,3 +70,4 @@
 + [队列的最大值](/codes/MaxQueue.md)
 + [n个骰子的点数](/codes/dicesProbability.md)
 + [扑克牌中的顺子](/codes/isStraight.md)
++ [圆圈中最后剩下的数字](/codes/lastRemaining.md)
