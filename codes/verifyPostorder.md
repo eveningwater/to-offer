@@ -54,7 +54,30 @@
 //  1   3
 ```
 
-我们定义成倒序列表，则为[5,6,2,3,1],遍历此列表，当r[i] > r[i + 1]，例如3 > 1（即r[1] > r[0]）,则6是2的右节点，当r[i] < r[i + 1]，如2 < 3(即r[2] < r[3]),则2是根节点5的左子节点，（注意索引是倒序开始的，也就是从4开始，所以索引应该是4->3->2->1->0）
+我们定义成倒序列表，则为[5,6,2,3,1],遍历此列表，当r[i] > r[i + 1]，例如3 > 1（即r[4] > r[3]）,则3是1的右节点，当r[i] < r[i + 1]，如2 < 3(即r[2] < r[3]),则2是根节点5的左子节点并且5也是大于最接近2的节点，因为5节点直接连接的左节点就是2。如下图所示:
+
+![](../images/reverse-order-2.png)
+
+因此，遍历"后序遍历的倒序"会多次遇到递减节点r[i],若所有的递减节点r[i]对应的父节点root都满足以上条件，则可判定为二叉树。
+
+根据以上特性，我们就可以考虑使用`单调栈`来实现:
+
+* 借助一个单调栈stack存储值递增的节点。
+* 每当遇到递减节点r[i]，则通过出栈的方式来更新节点r[i]的父节点root。
+* 每轮需要判断r[i]与root节点的关系:
+    * 若r[i] > root则说明不满足二叉树的定义，直接返回false
+    * 若r[i] < root则说明满足二叉树的定义，则继续遍历
+
+算法流程如下:
+
+1. 初始化:单调栈stack,父节点值root = Infinity（初始值为无穷大，可以把树的根节点看做是无穷大节点的左子节点）。
+2. 倒序遍历postorder,记每个节点为r[i]:
+
+   2.1 判断:当r[i] > root,则说明此二叉树的后序遍历不满足二叉树的定义，直接返回false
+   2.2 更新父节点root:当栈不为空并且r[i] < stack[stack.length - 1]时，循环出栈，并将出栈节点赋值给root
+   2.3 入栈：将当前节点r[i]入栈
+
+3. 若遍历完成，则说明二叉树满足定义，返回true。
 
 ```js
 /**
@@ -62,13 +85,22 @@
  * @return {boolean}
  */
 var verifyPostorder = function(postorder) {
-   
+    let stack = [],root = Infinity;
+    for(let i = postorder.length - 1;i >= 0;i--){
+        if(postorder[i] > root){
+            return false;
+        }
+        while(stack.length && postorder[i] < stack[stack.length - 1]){
+            root = stack.pop();
+        }
+        stack.push(postorder[i]);
+    }
+    return true;
 };
 ```
 
 时间复杂度 O(N) ： 遍历 postorder 所有节点，各节点均入栈 / 出栈一次，使用 O(N) 时间。
 空间复杂度 O(N) ： 最差情况下，单调栈 stack 存储所有节点，使用 O(N) 额外空间。
-
 
 
 [更多思路](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/solution/mian-shi-ti-33-er-cha-sou-suo-shu-de-hou-xu-bian-6/)。
