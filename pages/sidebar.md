@@ -64,3 +64,4 @@
 + [扑克牌中的顺子](/codes/isStraight.md)
 + [圆圈中最后剩下的数字](/codes/lastRemaining.md)
 + [股票的最大利润](/codes/maxProfit.md)
++ [求1+2+…+n](/codes/sumNums.md)
