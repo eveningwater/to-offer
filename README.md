@@ -73,3 +73,4 @@
 + [圆圈中最后剩下的数字](/codes/lastRemaining.md)
 + [股票的最大利润](/codes/maxProfit.md)
 + [求1+2+…+n](/codes/sumNums.md)
++ [不用加减乘除做加法](/codes/add.md)
