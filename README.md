@@ -74,3 +74,4 @@
 + [股票的最大利润](/codes/maxProfit.md)
 + [求1+2+…+n](/codes/sumNums.md)
 + [不用加减乘除做加法](/codes/add.md)
++ [构建乘积数组](/codes/constructArr.md)
