@@ -75,3 +75,4 @@
 + [求1+2+…+n](/codes/sumNums.md)
 + [不用加减乘除做加法](/codes/add.md)
 + [构建乘积数组](/codes/constructArr.md)
++ [把字符串转换成整数](/codes/strToInt.md)
