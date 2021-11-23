@@ -102,8 +102,25 @@ var singleNumbers = function(nums) {
 };
 ```
 
-时间复杂度 O(n)： 线性遍历 nums使用 O(n) 时间，遍历 x ^ y 二进制位使用 O(32) = O(1) 时间。
-空间复杂度 O(1)： 辅助变量 a, b, x, y使用常数大小额外空间。
+以上代码，我们也可以利用数组的相关迭代API来实现，例如以下代码:
+
+```js
+var singleNumbers = function(nums) {
+    //对所有数字执行按位异或
+    const ab = nums.reduce((res,n) => res ^= n,0);
+   //  寻找位，方便后续分组
+    const findC = (ab,c) => (ab & c) === 0 ? findC(ab,c << 1) : c;
+    const c = findC(ab,1);
+   //  根据分组返回结果
+    return nums.reduce((res,n) => {
+        res[n & c ? 0 : 1] ^= n;
+        return res; 
+    },[0,0]);
+};
+```
+
+时间复杂度 O(n)： 线性遍历 nums 使用 O(n) 时间，遍历 unit ^ res 二进制位使用 O(32) = O(1) 时间。
+空间复杂度 O(1)： 辅助变量 a, b, unit, res 使用常数大小额外空间。
 
 更多详细解题思路参考[题解](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/jian-zhi-offer-56-i-shu-zu-zhong-shu-zi-tykom/)。
 
