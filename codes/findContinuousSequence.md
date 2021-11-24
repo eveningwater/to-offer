@@ -23,15 +23,70 @@
 
 ### 思路分析
 
+对于本题，我们需要知道一个求和公式。设连续正整数序列的左边界l和右边界r，则此序列的元素和target等于平均值(l + r) / 2乘以元素数量(r - l + 1),即:
 
+```js
+target = (l + r) * (r - l + 1) / 2
+```
+
+并且在这里我们应该知道l应该是大于等于1的，而r应该是大于等于2的。因为如果target小于等于2，那根本就没有超过2个数的连续正整数序列，不符合题意。展开这个公式，我们可以得到:
+
+```js
+target = (r ^ 2 + r - l ^ 2 + l ) / 2
+//=>
+0 =  r ^ 2 + r - (2 * target + l ^ 2 - l)
+```
+
+根据观察，我们知道如果target和l已知，则r的结果就是一个一元二次方程。根据[一元二次方程的求根公式](https://baike.baidu.com/item/%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%E5%85%AC%E5%BC%8F/56066624?fr=aladdin)可得:
+
+```js
+j = (-b (+ / -) Math.sqrt(b ^ 2 - 4 * a * c)) / 2a = (-1 (+ / -) Math.sqrt(1 + 4 * (2 * target + l ^ 2 - l))) / 2
+```
+
+由于r  > l 恒成立，因此必须舍去负数的解，即:
+
+```js
+j = (-1 + Math.sqrt(1 + 4 * (2 * target + l ^ 2 - l))) / 2
+```
+
+因此，通过从小到大遍历左边界l来计算以l为起始数字的连续正整数序列，每轮中，根据以上公式可以得到右边界r,当r满足以下2个条件是记录结果（用一个数组来存储，添加到数组中去）:
+
+1. r为整数：符合题目的所有正整数连续序列。
+2. l < r: 满足题目至少要求两个数。
+
+> 当target= 9时，以上求解流程如下图所示:
+
+![](../images/findContinuousSequence-1.png)
+
+详情代码如下:
 
 ```js
 /**
  * @param {number} target
  * @return {number[][]}
  */
-var findContinuousSequence = function(nums) {
-    
+var findContinuousSequence = function(target) {
+    // 初始化左边界与右边界以及记录结果数组
+    let l = 1,r = 2,res = [];
+    // 遍历左边界
+    while(l < r){
+        // 计算右边界，根据公式
+        r = (-1 + Math.sqrt(1 + 4 * (2 * target + l * l - l))) / 2;
+        // 判断r是否为整数(与1取余即可判断)并且l < r
+        if(l < r && r % 1 === 0){
+            // 初始化序列数组
+            let ans = new Array(r - l + 1);
+            for(let k = l;k <= r;k++){
+                // 存储每一个连续数字
+                 ans[k - l] = k;
+            }
+            // 添加到结果数组中
+            res.push(ans);
+        }
+        l++;
+    }
+    // 返回结果数组
+    return res;
 };
 ```
 
