@@ -26,18 +26,20 @@
 
 ### 思路分析
 
-
+本题的难点在2处，题目要读懂，其次就是实现的函数均摊时间复杂度要是O(1)。在这里我们直接使用基本的操作方法就可以实现，我们用一个队列和一个最大值变量来分别存储添加的数据和最大值。
 
 ```js
 var MaxQueue = function() {
-   
+   //初始化队列和最大值
+   this.queue = [];
+   this.maxValue = -1;
 };
 
 /**
  * @return {number}
  */
 MaxQueue.prototype.max_value = function() {
-    
+    return this.maxValue;
 };
 
 /** 
@@ -45,14 +47,27 @@ MaxQueue.prototype.max_value = function() {
  * @return {void}
  */
 MaxQueue.prototype.push_back = function(value) {
-    
+    this.queue[this.queue.length] = value;
+    this.maxValue = Math.max(this.maxValue,value);
 };
 
 /**
  * @return {number}
  */
 MaxQueue.prototype.pop_front = function() {
-   
+    if(!this.queue.length){
+        return -1;
+    }
+    // 删除元素
+    let first = this.queue.shift();
+    if(first === this.maxValue){
+        this.maxValue = Math.max(...this.queue);
+    }
+    // 如果删除了元素之后，队列为空，则将最大值设置为-1
+    if(!this.queue.length){
+        this.maxValue = -1;
+    }
+    return first;
 };
 
 /**
