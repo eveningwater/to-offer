@@ -76,3 +76,4 @@
 + [不用加减乘除做加法](/codes/add.md)
 + [构建乘积数组](/codes/constructArr.md)
 + [把字符串转换成整数](/codes/strToInt.md)
++ [二叉搜索树的最近公共祖先-1](/codes/lowestCommonAncestor-1.md)
