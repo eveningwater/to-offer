@@ -77,3 +77,4 @@
 + [构建乘积数组](/codes/constructArr.md)
 + [把字符串转换成整数](/codes/strToInt.md)
 + [二叉搜索树的最近公共祖先-1](/codes/lowestCommonAncestor-1.md)
++ [二叉搜索树的最近公共祖先-2](/codes/lowestCommonAncestor-2.md)
