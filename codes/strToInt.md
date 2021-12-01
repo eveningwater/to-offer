@@ -49,7 +49,36 @@
 
 ### 思路分析
 
+本题需要拆分情况来分析。具体有以下的字符需要考虑:
 
+* 首尾空格：删除即可。
+* 符号位：三种符号即"+","-","无符号"，新建一个变量保存符号位，返回前做判断即可。
+* 非数字字符：首次遇到非数字字符，则应立即返回。
+* 数字字符：
+    * 字符转数字：此数字字符的ASCII码与0的ASCII码相减即可。如:("4" - "0")。
+    * 数字拼接:若从左向右遍历数字，设当前位字符为c,当前位数字为x，数字结果为res，则数字拼接公式为:
+
+    ```
+    res = 10 * res + x;
+    x = ascii(c) - ascii(0);
+    ```
+
+如下图所示:
+
+![](../images/strToInt-1.png)
+
+当然还要注意一点，根据题意，在这里，我们需要做数字的越界处理，尽管我们可以在拼接完数值之后，在最后的结果做判断，但其实我们这里也可以有更巧妙的办法，那就是在每一次拼接的时候做判断。
+
+设数字边界max = Math.floor(2147483647 / 10) = 214748364,则会有以下两种情况越界。
+
+1. res > max 情况一: 执行拼接10 * res >= 2147483650越界
+2. res = max,x > 7 情况二： 拼接后是2147483648或2147483649越界
+
+如下图所示:
+
+![](../images/strToInt-2.png)
+
+也许有人会好奇这里为什么是判断x > 7呢？我们尝试看拼接后的结果如果是大于等于8，那么一定会越界。这样就不难理解为什么要判断x > 7呢。根据这种思路，我们可以写出如下代码:
 
 ```js
 /**
@@ -57,13 +86,145 @@
  * @return {number}
  */
 var strToInt = function(s) {
-
+    // 消除两端空白
+    s = s.trim();
+    // 判断如果s是空字符串，则直接返回0
+    if(!s.length){
+        return 0;
+    }
+    // 定义符号位,默认是正数即为1，结果值res以及数值的边界
+    let sign = 1,res = 0,max = Math.floor(Math.pow(2,31) / 10);
+    // 定义迭代起始值i
+    let i = 1;
+    // 判断符号位
+    if(s[0] === "-"){
+        sign = -1;
+    }
+    // 如果不是符号位，则i应该从0开始遍历
+    else if(s[0] !== "+"){
+        i = 0;
+    }
+    // 开始迭代,起始值为i
+    for(let j = i;j < s.length;j++){
+        // 判断如果不是数字，则直接跳出
+        // 这里的判断也很巧妙，即判断ascii码值在0到9之外，则代表一定不是数字
+        if(s[j] < "0" || s[j] > "9"){
+            break;
+        }
+        // 判断越界
+        if(res > max || (res === max && s[j] > '7')){
+            return sign === 1 ? Math.pow(2,31) - 1 : -Math.pow(2,31);
+        }
+        // 根据计算公式
+        res = res * 10 + (s[j] - "0");
+    }
+    return res * sign;
 };
 ```
 
-时间复杂度 O(n)： 其中 n 为字符串长度，线性遍历字符串占用 O(n) 时间。
-空间复杂度 O(n)： 删除首尾空格后需建立新字符串，最差情况下占用 O(n) 额外空间。
+* 时间复杂度 O(n)： 其中 n 为字符串长度，线性遍历字符串占用 O(n) 时间。
+* 空间复杂度 O(n)： 删除首尾空格后需建立新字符串，最差情况下占用 O(n) 额外空间。
 
+如果不使用trim方法，从头到尾遍历字符串，则可以将空间复杂度降到O(1)。代码如下:
 
+```js
+/**
+ * @param {string} str
+ * @return {number}
+ */
+var strToInt = function(s) {
+    let res = 0,//结果
+        max = Math.floor(Math.pow(2,31) / 10),//边界值
+        i = 0,//迭代起始值
+        sign = 1,//符号位
+        len = s.length;//字符串长度
+    if(!len){
+        return res;
+    }
+    // 判断是否是空字符串
+    while(s.charAt(i) === " "){
+        if(++i === len){
+            return res;
+        }
+    }
+    // 判断符号位
+    if(s.charAt(i) === "-"){
+        sign = -1;
+    }
+    // 根据符号位更改迭代起始值
+    if(s.charAt(i) === "-" || s.charAt(i) === "+"){
+        i++;
+    }
+    for(let j = i;j < len;j++){
+        // 判断如果是非数字，则跳过
+        if(s.charAt(j) < '0' || s.charAt(j) > '9'){
+            break;
+        }
+        // 判断数字越界
+        if(res > max || (res === max && s[j] > "7")){
+            return sign === 1 ? Math.pow(2,31) - 1 : -Math.pow(2,31);
+        }
+        res = 10 * res + (s[j] - "0");
+    }
+    return sign * res;
+}
+```
+
+如果不能理解在每一次迭代中判断数字越界，我们可以在最后对结果是否越界做判断。因此以上代码可修改如下:
+
+```js
+/**
+ * @param {string} str
+ * @return {number}
+ */
+var strToInt = function(s) {
+    let res = 0,//结果
+        max = Math.pow(2,31) - 1,//边界值
+        min = -Math.pow(2,31),
+        i = 0,//迭代起始值
+        sign = 1,//符号位
+        len = s.length;//字符串长度
+    if(!len){
+        return res;
+    }
+    // 判断是否是空字符串
+    while(s.charAt(i) === " "){
+        if(++i === len){
+            return res;
+        }
+    }
+    // 判断符号位
+    if(s.charAt(i) === "-"){
+        sign = -1;
+    }
+    // 根据符号位更改迭代起始值
+    if(s.charAt(i) === "-" || s.charAt(i) === "+"){
+        i++;
+    }
+    for(let j = i;j < len;j++){
+        // 判断如果是非数字，则跳过
+        if(s.charAt(j) < '0' || s.charAt(j) > '9'){
+            break;
+        }
+        res = 10 * res + (s.charAt(j) - "0");
+    }
+    return sign * res > max ? max : sign * res < min ? min : sign * res;
+}
+```
+
+除了以上方法外，我们还可以使用正则表达式，代码比较简洁，如下:
+
+```js
+/**
+ * @param {string} str
+ * @return {number}
+ */
+var strToInt = function(str) {
+    const min = -(2 ** 31),max = 2 ** 31 - 1;
+    const res = str.trim().match(/^[+-]?\d+/);
+    if(!res)return 0;
+    return res <= min ? min : res >= max ? max : res;
+};
+```
 
 [更多思路](https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/solution/mian-shi-ti-67-ba-zi-fu-chuan-zhuan-huan-cheng-z-4/)。
