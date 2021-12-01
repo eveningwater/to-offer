@@ -68,4 +68,4 @@
 * 时间复杂度 O(n)： 遍历数组使用 O(n)，每轮遍历的判断和交换操作使用 O(1)。
 * 空间复杂度 O(1)： 使用常数复杂度的额外空间。
 
-[更多思路](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-shi-ti-03-shu-zu-zhong-zhong-fu-de-shu-zi-yua/)
+[更多思路](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-shi-ti-03-shu-zu-zhong-zhong-fu-de-shu-zi-yua/)。
