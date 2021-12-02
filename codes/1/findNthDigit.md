@@ -32,7 +32,7 @@
 
 如下图所示:
 
-![](../images/findNthNumber-1.png)
+![](../../images/findNthNumber-1.png)
 
 如上图所示，我们可以推导出各digit下的数位数量用一个变量count来表示的计算公式为:
 
@@ -50,7 +50,7 @@ count = 9 * start * digit;
 
 先来看一张图:
 
-![](../images/findNthNumber-2.png)
+![](../../images/findNthNumber-2.png)
 
 如上图所示，我们应该就知道了，我们循环执行n -= count，直到n > count为止，此时因为n减去了digit - 1位数的数位数量count，因此，此时的n是从start开始计数的。
 
@@ -73,7 +73,7 @@ while(n <= count){
 
 我们再来看一张图:
 
-![](../images/findNthNumber-3.png)
+![](../../images/findNthNumber-3.png)
 
 如上图所示,我们就能明白所求数位x在从数字start开始的第|(n - 1) / digit|个数字中（start为第0个数字）。
 
@@ -89,7 +89,7 @@ num = start + (n - 1) / digit;
 
 我们接着看一张图:
 
-![](../images/findNthNumber-4.png)
+![](../../images/findNthNumber-4.png)
 
 如上图所示,所求数位为数字num的第(n - 1) % digit位（数字的首个数位为第0位）。
 

@@ -34,7 +34,7 @@ f(i,j) = max(f(i,j - 1),f(i - 1,j)) + grid(i,j);
 
 因此，本题可以使用动态规划的算法思想来解决。以上公式便是转移方程。
 
-![](../images/maxValue-1.png)
+![](../../images/maxValue-1.png)
 
 动态规划解析如下:
 

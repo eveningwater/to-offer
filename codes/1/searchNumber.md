@@ -31,7 +31,7 @@
 
 本题要求统计数字target出现的次数，因此可以转化为，使用二分法分别找到左边界left和右边界right，因此可以得到数字target的出现次数为right - left -1。如下图所示:
 
-![](../images/searchNumber-1.png)
+![](../../images/searchNumber-1.png)
 
 接下来，我们来看算法的详细流程:
 
@@ -104,7 +104,7 @@ var search = function(nums, target) {
 
 通过分析以上代码，我们可以看到我们多写了一次二分查找。因此代码显得臃肿，所以我们需要优化一下，将代码封装在一个helper函数中。
 
-![](../images/searchNumber-2.png)
+![](../../images/searchNumber-2.png)
 
 如上图所示，由于数组中的所有元素都是整数，因此我们可以二分查找target和target - 1的右边界，然后将右边界相减并返回这个结果即可。
 

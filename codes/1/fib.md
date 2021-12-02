@@ -49,7 +49,7 @@ var fib = function(n) {
 
 以上算法的时间复杂度和空间复杂度见下图:
 
-![递归法](../images/fib-2.png)
+![递归法](../../images/fib-2.png)
 
 - 方法二：动态规划
 
@@ -68,7 +68,7 @@ var fib = function(n) {
 
 节省了 arr 列表空间，因此空间复杂度降至 O(1) 。如下图所示:
 
-![](../images/fib-1.png)
+![](../../images/fib-1.png)
 
 ```js
   var fib = function(n){

@@ -6,7 +6,7 @@
 
 例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]
 
-![](../images/lowestCommonAncestor-1-1.png)
+![](../../images/lowestCommonAncestor-1-1.png)
 
 
 示例 1：
@@ -38,7 +38,7 @@
 
 若节点p在节点root的左（右）子树，或节点p = root节点，则称root节点是p节点的祖先。如下图所示:
 
-![](../images/lowestCommonAncestor-1-2.png)
+![](../../images/lowestCommonAncestor-1-2.png)
 
 而最近公共祖先节点的定义为:
 
@@ -54,7 +54,7 @@
 
 如下图所示:
 
-![](../images/lowestCommonAncestor-1-3.png)
+![](../../images/lowestCommonAncestor-1-3.png)
 
 并且，本题给定了2个重要的条件。
 

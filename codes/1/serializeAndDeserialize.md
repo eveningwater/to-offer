@@ -8,7 +8,7 @@
 
 示例:
 
-![示例](../images/serializeAndDeserialize-1.jpg)
+![示例](../../images/serializeAndDeserialize-1.jpg)
 
 
 输入：root = [1,2,3,null,null,4,5]
@@ -29,7 +29,7 @@
 
 这里，我们采用先序遍历的方式，即根->左->右。如图所示:
 
-![示例](../images/serializeAndDeserialize-2.png)
+![示例](../../images/serializeAndDeserialize-2.png)
 
 我们先从根节点`1`开始，然后到根节点`1`的左子树的根节点`2`,我们以`","`来确定每一个节点的分隔符号，所以这里我们的节点字符串就应该变成了`1,2,`。然后，我们再从根节点`2`开始，访问它的左子树和右子树节点，即左子树`1,2,3,null,null`。`3`的左节点和右节点为空，所以我们以`null`表示，这也就是我们在序列化树的结构期间所保存树结构的一种方式。左子树访问完之后，再访问右子树,得到节点字符串为`1,2,3,null,null,4,null,null`。最后，我们回到根节点`1`并访问它的右子树，恰好就是叶节点`5`,最后序列化出来的字符串就是`1,2,3,null,null,4,null,null,5,null,null`。
 

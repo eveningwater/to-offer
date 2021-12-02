@@ -6,7 +6,7 @@
 
 例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]
 
-![](../images/lowestCommonAncestor-2-1.png)
+![](../../images/lowestCommonAncestor-2-1.png)
 
 
 示例 1：
@@ -38,7 +38,7 @@
 
 若节点p在节点root的左（右）子树，或节点p = root节点，则称root节点是p节点的祖先。如下图所示:
 
-![](../images/lowestCommonAncestor-2-2.png)
+![](../../images/lowestCommonAncestor-2-2.png)
 
 而最近公共祖先节点的定义为:
 
@@ -54,7 +54,7 @@
 
 如下图所示:
 
-![](../images/lowestCommonAncestor-2-3.png)
+![](../../images/lowestCommonAncestor-2-3.png)
 
 回顾一下[重建二叉树](/codes/1/buildTree.md)，我们知道遍历二叉树有3种遍历，即前序遍历（先序遍历）、中序遍历、后序遍历。观察发现，这里使用先序遍历来进行递归，遇到节点p、q的时候则返回。然后再从底至顶回溯，当节点p、q在root的异侧时，root节点即为二叉树的最近公共祖先节点。因此直接向上返回root节点即可。具体算法流程如下:
 

@@ -163,7 +163,7 @@ var divide = function(a, b) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-时间复杂度 O(1)： 最差情况下（例如 a = 0x7fffffff , b = 1 时），需循环 32 次，使用 O(1) 时间；每轮中的常数次位操作使用 O(1) 时间。
-空间复杂度 O(1)： 使用常数大小的额外空间。
+* 时间复杂度 O(1)： 最差情况下，需循环 32 次，使用 O(1) 时间；每轮中的常数次位操作使用 O(1) 时间。
+* 空间复杂度 O(1)： 使用常数大小的额外空间。
 
 [更多思路](https://leetcode-cn.com/problems/xoh6Oh/solution/jian-dan-yi-dong-javac-pythonjs-zheng-sh-e8r6/)。

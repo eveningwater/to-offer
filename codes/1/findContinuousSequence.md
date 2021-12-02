@@ -56,7 +56,7 @@ j = (-1 + Math.sqrt(1 + 4 * (2 * target + l ^ 2 - l))) / 2
 
 > 当target= 9时，以上求解流程如下图所示:
 
-![](../images/findContinuousSequence-1.png)
+![](../../images/findContinuousSequence-1.png)
 
 详情代码如下:
 
@@ -90,7 +90,7 @@ var findContinuousSequence = function(target) {
 };
 ```
 
-时间复杂度 O(n)： 其中 n = target；连续整数序列至少有两个数字，而 i < j 恒成立，因此至多循环 target / 2次，使用 O(n)时间；循环内，计算 j 使用 O(1) 时间；当 i = 1 时，达到最大序列长度![](../images/findContinuousSequence-O.png)，考虑到解的稀疏性，将列表构建时间简化考虑为 O(1)；
+时间复杂度 O(n)： 其中 n = target；连续整数序列至少有两个数字，而 i < j 恒成立，因此至多循环 target / 2次，使用 O(n)时间；循环内，计算 j 使用 O(1) 时间；当 i = 1 时，达到最大序列长度![](../../images/findContinuousSequence-O.png)，考虑到解的稀疏性，将列表构建时间简化考虑为 O(1)；
 空间复杂度 O(1)： 变量 i , j 使用常数大小的额外空间。
 
 

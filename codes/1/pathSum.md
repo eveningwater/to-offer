@@ -5,7 +5,7 @@
 
 示例 1:
 
-![示例1](../images/pathsumii1.jpg)
+![示例1](../../images/pathsumii1.jpg)
 
 输入: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
 输出: [[5,4,11,2],[5,8,4,5]]
@@ -13,7 +13,7 @@
 
 示例 2:
 
-![示例2](../images/pathsum2.jpg)
+![示例2](../../images/pathsum2.jpg)
 
 输入: root = [1,2,3], targetSum = 5
 输出: []

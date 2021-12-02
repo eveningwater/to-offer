@@ -57,7 +57,7 @@ x<sub>m + 1</sub> = Math.max(nums[i + 1],...,nums[j + 1])
 
 下图展示了滑动窗口的过程:
 
-![](../images/maxSlidingWindow-1.png)
+![](../../images/maxSlidingWindow-1.png)
 
 以下是我们使用暴力循环解答本题的代码:
 

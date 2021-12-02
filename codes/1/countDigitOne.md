@@ -41,19 +41,19 @@
 
 > 如下图所示，以 n = 2304 为例，求 digit = 10 （即十位）的 1 出现次数。
 
-![](../images/countDigitOne-1.png)
+![](../../images/countDigitOne-1.png)
 
 2. 当 cur = 1 时: 此时 1 的出现次数由高位与低位来决定，计算公式为:`high * digit + low + 1`(加1就是包含当前位)
 
 > 如下图所示，以 n = 2314 为例，求 digit = 10 （即十位）的 1 出现次数。
 
-![](../images/countDigitOne-2.png)
+![](../../images/countDigitOne-2.png)
 
 3. 当 cur = 2 时: 此时 1 的出现次数由高位来决定，计算公式为:`(high + 1) * digit`(之所以要加1再乘以10，就是包含当前位出现1的次数)。
 
 > 如下图所示，以 n = 2324 为例，求 digit = 10 （即十位）的 1 出现次数。
 
-![](../images/countDigitOne-3.png)
+![](../../images/countDigitOne-3.png)
 
 根据前面的三点分析，我们从而可以推导出递推公式，当然再推导出公式之前，我们应该先初始化`high,cur,low,digit`的初始值，如下所示:
 

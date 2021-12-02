@@ -48,7 +48,7 @@ var missingNumber = function(nums){
 
 因此，右子数组的首位元素即是缺失的数字。在这里，我们就可以考虑二分法来解决本题。二分法分析如下图所示:
 
-![](../images/missingNumber-1.png)
+![](../../images/missingNumber-1.png)
 
 二分法算法流程如下:
 

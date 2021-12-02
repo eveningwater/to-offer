@@ -2,13 +2,13 @@
 
 > 题目:输入两个链表，找出它们的第一个公共节点。如下面的两个链表：
 
-![](../images/getIntersectionNode-1.png)
+![](../../images/getIntersectionNode-1.png)
 
 在节点 c1 开始相交。
 
 示例1:
 
-![](../images/getIntersectionNode-2.png)
+![](../../images/getIntersectionNode-2.png)
 
 ```js
 // 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
@@ -18,7 +18,7 @@
 
 示例2:
 
-![](../images/getIntersectionNode-3.png)
+![](../../images/getIntersectionNode-3.png)
 
 ```js
 // 输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
@@ -28,7 +28,7 @@
 
 示例3:
 
-![](../images/getIntersectionNode-4.png)
+![](../../images/getIntersectionNode-4.png)
 
 ```js
 // 输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
