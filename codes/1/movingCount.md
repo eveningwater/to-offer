@@ -17,7 +17,7 @@
 
 ### 思路分析
 
-本题和[矩阵中的路径](/codes/exist.md)有些类似，都可以用DFS算法来解决，但是这里使用BFS广度优先遍历搜索比深度优先遍历搜索更好一点，因为深度优先遍历搜索会从四个方向去进行搜索，而这里根据题意，我们可以直接排除向上和向左方向的搜索，因此在这里，我们可以使用BFS算法来解决。
+本题和[矩阵中的路径](/codes/1/exist.md)有些类似，都可以用DFS算法来解决，但是这里使用BFS广度优先遍历搜索比深度优先遍历搜索更好一点，因为深度优先遍历搜索会从四个方向去进行搜索，而这里根据题意，我们可以直接排除向上和向左方向的搜索，因此在这里，我们可以使用BFS算法来解决。
 
 [参考解题思路](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/solution/javascriptyan-du-you-xian-bian-li-bfszhu-shi-xiang/)。
 
