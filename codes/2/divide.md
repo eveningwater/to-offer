@@ -137,6 +137,9 @@ var divide = function(a, b) {
     if(a <= min && b === -1){
         return max;
     }
+    if(a <= min && b === 1){
+        return min;
+    }
     // 判断符号
     if((a > 0 && b < 0) || (a < 0 && b > 0)){
         sign = -1;
