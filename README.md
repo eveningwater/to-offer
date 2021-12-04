@@ -85,3 +85,4 @@
 
 + [整数除法](/codes/2/divide.md)
 + [二进制加法](/codes/2/addBinary.md)
++ [前 n 个数字二进制中 1 的个数](/codes/2/countBits.md)
