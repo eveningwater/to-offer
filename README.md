@@ -92,3 +92,4 @@
 + [数组中和为 0 的三个数](/app/codes/2/threeSum.md)
 + [和大于等于 target 的最短子数组](/app/codes/2/minSubArrayLen.md)
 + [乘积小于 K 的子数组](/app/codes/2/numSubarrayProductLessThanK.md)
++ [和为 k 的子数组](/app/codes/2/subarraySum.md)
