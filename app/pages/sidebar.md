@@ -87,5 +87,6 @@
 + [和为 k 的子数组](/codes/2/subarraySum.md)
 + [0 和 1 个数相同的子数组](/codes/2/findMaxLength.md)
 + [左右两边子数组的和相等](/codes/2/pivotIndex.md)
-+ [ 二维子矩阵的和](/codes/2/NumMatrix.md)
++ [二维子矩阵的和](/codes/2/NumMatrix.md)
++ [字符串中的变位词](/codes/2/checkInclusion.md)
 
