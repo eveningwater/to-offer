@@ -38,12 +38,36 @@
  * @return {boolean}
  */
 var checkInclusion = function(s1, s2) {
-
+    const n = s1.length,m = s2.length;
+    if(n > m){
+        return false;
+    }
+    let letterArr = [];
+    for(let i = 0;i <= 26;i++){
+        letterArr.push(0);
+    }
+    for(let i = 0;i < n;i++){
+        letterArr[s1[i].charCodeAt() - 'a'.charCodeAt()]--;
+    }
+    let left = 0;
+    for(let right = 0;right < m;right++){
+        const char = s2[right].charCodeAt() - "a".charCodeAt();
+        letterArr[char]++;
+        while(letterArr[char] > 0){
+            letterArr[s2[left].charCodeAt() - "a".charCodeAt()]--;
+            left++;
+        }
+        if(right - left + 1 === n){
+            return true;
+        }
+    }
+    return false;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-
+* 时间复杂度O(26 + n + m),也就是O(n + m)。
+* 空间复杂度O(1)。
 
 [更多思路](https://leetcode-cn.com/problems/MPnaiL/solution/zi-fu-chuan-zhong-de-bian-wei-ci-by-leet-wbma/)。
