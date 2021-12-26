@@ -99,3 +99,5 @@
 + [字符串中的变位词](/app/codes/2/checkInclusion.md)
 + [字符串中的所有变位词](/app/codes/2/findAnagrams.md)
 + [含有所有字符的最短字符串](/app/codes/2/minWindow.md)
++ [有效的回文](/app/codes/2/isPalindrome.md)
++ [最多删除一个字符得到回文](/app/codes/2/validPalindrome.md)
