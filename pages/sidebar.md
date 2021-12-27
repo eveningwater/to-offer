@@ -93,4 +93,4 @@
 + [含有所有字符的最短字符串](/codes/2/minWindow.md)
 + [有效的回文](/codes/2/isPalindrome.md)
 + [最多删除一个字符得到回文](/codes/2/validPalindrome.md)
-
++ [回文子字符串的个数](/codes/2/countSubstrings.md)
