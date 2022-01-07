@@ -39,6 +39,7 @@
 
 ### 思路分析
 
+本题的思路可以参考[链表中倒数第k个节点](/codes/1/getKthFromEnd.md)。也就是说本题可以采用双指针算法来解决，创建一个慢指针left和一个快指针right。浪快指针right走完，如果为null，则代表n和链表的长度相等，此时返回头节点即head.next即可。当right.next不为null，则快慢指针一起前进，最后修改慢指针的指向为下一节点的指向即可。代码如下:
 
 
 ```js
@@ -55,13 +56,29 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
-
+    //创建快慢指针
+    let left = head,right = head;
+    for(let i = 0;i < n;i++){
+        right = right.next;
+    }
+    //right为null，代表n等于链表的长度，返回头节点
+    if(right === null){
+        return head.next;
+    }
+    while(right.next){
+        //快慢指针一起前进
+        left = left.next;
+        right = right.next;
+    }
+    //修改慢指针指向，也就是删除第n个节点
+    left.next = left.next.next;
+    return head;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(n)。
+* 空间复杂度：O(1)。
 
 [更多思路](https://leetcode-cn.com/problems/SLwz0R/solution/shua-chuan-jian-zhi-offer-day11-lian-bia-tuyw/)。
