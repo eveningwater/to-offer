@@ -103,3 +103,4 @@
 + [最多删除一个字符得到回文](/app/codes/2/validPalindrome.md)
 + [回文子字符串的个数](/app/codes/2/countSubstrings.md)
 + [删除链表的倒数第 n 个结点](/app/codes/2/removeNthFromEnd.md)
++ [链表中环的入口节点](/app/codes/2/detectCycle.md)
