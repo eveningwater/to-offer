@@ -85,4 +85,46 @@ var reverseList = function(head) {
 * 时间复杂度：O(n)。
 * 空间复杂度：O(1)。
 
+既然可以使用迭代法来解决，则同样的也可以使用递归来解决，本题在递归的思路上稍微复杂一些。递归的关键点在于找到递归的条件，首先我们需要知道如果是空链表或者只有一个节点的链表是不需要进行反转的，因此递归终止的条件我们就找到了。即:
+
+```js
+//也可以写成这样的判断head === null || head.next === null
+if(!head || !head.next){
+    return head;
+}
+```
+
+现在，我们用n<sub>1</sub> ~ n<sub>k</sub> ~ n<sub>k + 1</sub> ~  n<sub>m</sub>来代表一个链表。假定我们只反转n<sub>k</sub> 和 n<sub>k + 1</sub>，也就是说需要将n<sub>k + 1</sub>的下一个节点指向n<sub>k</sub>。那么我们应该如何做?
+
+答案很简单，那就是将n<sub>k</sub>.next.next = n<sub>k</sub>。因此，这个表达式就是我们递归的条件，除此之外，n<sub>1</sub>的下一个节点我们应该指向为null，这样做的目的是避免产生环。根据以上分析，可以写出如下代码:
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    if(head === null || head.next === null){
+        return head;
+    }
+    const newHead = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return newHead;
+};
+```
+
+
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
+
 [更多思路](https://leetcode-cn.com/problems/UHnkqh/solution/fan-zhuan-lian-biao-by-leetcode-solution-34oi/)。
