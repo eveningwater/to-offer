@@ -39,13 +39,36 @@
 
 ### 思路分析
 
+本题可以采用前缀和的思路来解答。我们可以在初始化时，对每一行计算前缀和，然后检索时对二维区域的每一行计算子数组的和，然后对每一行的子数组计算总和。
+
+具体实现来讲，就是初始化一个m行n + 1列的二维数组sums，其中m为矩阵的行数，n为矩阵的列数，sums[i]为matrix[i]的前缀和数组。将sums的列数设为n + 1的目的主要是方便计算每一行的子数组和，而不需要对col1 = 0做处理。具体代码如下:
 
 ```js
 /**
  * @param {number[][]} matrix
  */
 var NumMatrix = function(matrix) {
-
+    //行数
+    const m =  matrix.length;
+    if(m > 0){
+        //列数
+        const n = matrix[0].length;
+        //初始化前缀和二维数组
+        this.sums = [];
+        //这里是为了初始化二维数组的每一项为0
+        for(let i = 0;i < m;i++){
+            this.sums[i] = [];
+            for(let j = 0;j <= n;j++){
+                this.sums[i][j] = 0;
+            }
+        }
+        //计算sums[i]的前缀和
+        for(let k = 0;k < m;k++){
+            for(let l = 0;l < n;l++){
+                this.sums[k][l + 1] = this.sums[k][l] + matrix[k][l];
+            }
+        }
+    }
 };
 
 /** 
@@ -56,7 +79,11 @@ var NumMatrix = function(matrix) {
  * @return {number}
  */
 NumMatrix.prototype.sumRegion = function(row1, col1, row2, col2) {
-
+    let sum = 0;
+    for(let i = row1;i <= row2;i++){
+        sum += this.sums[i][col2 + 1] - this.sums[i][col1];
+    }
+    return sum;
 };
 
 /**
@@ -68,6 +95,7 @@ NumMatrix.prototype.sumRegion = function(row1, col1, row2, col2) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-
+* 时间复杂度O(n * m),其中m为矩阵的行数，n为矩阵的列数。
+* 空间复杂度O(n * m)。
 
 [更多思路](https://leetcode-cn.com/problems/O4NDxx/solution/er-wei-zi-ju-zhen-de-he-by-leetcode-solu-vtih/)。
