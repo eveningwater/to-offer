@@ -107,3 +107,4 @@
 + [反转链表](/app/codes/2/reverseList.md)
 + [链表中的两数相加](/app/codes/2/addTwoNumbers.md)
 + [重排链表](/app/codes/2/reorderList.md)
++ [回文链表](/app/codes/2/isPalindromeList.md)
