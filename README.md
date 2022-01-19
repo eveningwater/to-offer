@@ -108,3 +108,4 @@
 + [链表中的两数相加](/codes/2/addTwoNumbers.md)
 + [重排链表](/codes/2/reorderList.md)
 + [回文链表](/codes/2/isPalindromeList.md)
++ [展平多级双向链表](/codes/2/flattenList.md)
