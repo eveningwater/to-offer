@@ -109,3 +109,4 @@
 + [重排链表](/app/codes/2/reorderList.md)
 + [回文链表](/app/codes/2/isPalindromeList.md)
 + [展平多级双向链表](/app/codes/2/flattenList.md)
++ [排序的循环链表](/app/codes/2/insertList.md)
