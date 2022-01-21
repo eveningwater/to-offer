@@ -47,6 +47,16 @@
 
 ### 思路分析
 
+本题在于需要知道节点插入链表的几种情况。
+
+* 1. 链表为空，节点可以插入到任意位置。
+* 2. 链表是单调升序的，如果能在链表中找到一个节点，记为当前节点cur，满足以下情况时不能被插入，反之即可插入。
+    * 2.1 如果当前节点的下一节点的值小于当前节点的值时。
+        * 2.1.1 如果当前节点的下一节点的值大于等于插入的值，则不能插入。例如:3 -> 4 -> 1，需要插入节点2，如果当前节点为3，当前节点的下一节点为1,1小于2，则代表可以插入。
+        * 2.1.2 如果当前节点的值小于等于插入的值，则不能插入。
+    * 2.2 如果当前节点的值小于等于插入值并且当前节点的下一节点的值大于等于插入值时，则不能插入。
+
+根据以上情况分析，我们就可以写出如下代码:
 
 ```js
 /**
@@ -63,13 +73,33 @@
  * @return {Node}
  */
 var insert = function(head, insertVal) {
-    
+    if(head === null){
+        head = new Node(insertVal);
+        head.next = head;
+        return head;
+    }
+    let cur = head;
+    while(cur.next !== head){
+        if(cur.next.val < cur.val){
+            if(cur.next.val >= insertVal){
+                break;
+            }else if(cur.val <= insertVal){
+                break;
+            }
+        }
+        if(cur.val <= insertVal && cur.next.val >= insertVal){
+            break;
+        }
+        cur = cur.next;
+    }
+    cur.next = new Node(insertVal,cur.next);
+    return head;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(n)。
+* 空间复杂度：O(1)。
 
 [更多思路](https://leetcode-cn.com/problems/4ueAj6/solution/gan-jue-da-jia-xie-de-du-you-dian-fu-za-k1klz/)。
