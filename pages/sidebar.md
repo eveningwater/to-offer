@@ -103,3 +103,6 @@
 + [展平多级双向链表](/codes/2/flattenList.md)
 + [排序的循环链表](/codes/2/insertList.md)
 + [插入、删除和随机访问都是 O(1) 的容器](/codes/2/RandomizedSet.md)
++ [最近最少使用缓存](/codes/2/LRUCache.md)
++ [有效的变位词](/codes/2/isAnagram.md)
++ [变位词组](/codes/2/groupAnagrams.md)
