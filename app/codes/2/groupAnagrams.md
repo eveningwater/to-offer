@@ -60,7 +60,7 @@ var groupAnagrams = function(strs) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
 
 [更多思路](https://leetcode-cn.com/problems/sfvd7V/solution/shua-chuan-jian-zhi-offer-day15-ha-xi-bi-p57n/)。
