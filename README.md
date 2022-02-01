@@ -114,3 +114,4 @@
 + [最近最少使用缓存](/app/codes/2/LRUCache.md)
 + [有效的变位词](/app/codes/2/isAnagram.md)
 + [变位词组](/app/codes/2/groupAnagrams.md)
++ [外星语言是否排序](/app/codes/2/isAlienSorted.md)
