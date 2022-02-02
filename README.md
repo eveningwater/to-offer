@@ -115,3 +115,4 @@
 + [有效的变位词](/app/codes/2/isAnagram.md)
 + [变位词组](/app/codes/2/groupAnagrams.md)
 + [外星语言是否排序](/app/codes/2/isAlienSorted.md)
++ [最小时间差](/app/codes/2/findMinDifference.md)
