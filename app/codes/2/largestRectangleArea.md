@@ -68,11 +68,9 @@ var largestRectangleArea = function(heights) {
 
 ![](../../images/2/largestRectangleArea-3.png)
 
-![](../../images/2/largestRectangleArea-4.png)
-
 通过上图可以发现，最后栈中除了为方便处理而加入的用来初始化的-1以外，还有1,4,5三个元素，对应的就是高度为1,2,3的柱子的下标。也就是说我们还没有计算出以1,2,3位高度的矩形的面积。这是因为，我们并没有找到比这三个柱子还矮的柱子，也就是说，我们最后如果加入一个高度为0的柱子，就可以将除了-1以外的栈中保存的所有柱子的下标都出栈，那么所有柱子对应的矩形面积则都会被计算，找出计算的矩形面积的最大值即可。如下图所示:
 
-![](../../images/2/largestRectangleArea-5.png)
+![](../../images/2/largestRectangleArea-4.png)
 
 ```js
 /**
