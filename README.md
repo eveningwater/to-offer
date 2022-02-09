@@ -122,3 +122,4 @@
 + [直方图最大矩形面积](/app/codes/2/largestRectangleArea.md)
 + [矩阵中最大的矩形](/app/codes/2/maximalRectangle.md)
 + [滑动窗口的平均值](/app/codes/2/movingAverage.md)
++ [最近请求次数](/app/codes/2/recentCounter.md)
