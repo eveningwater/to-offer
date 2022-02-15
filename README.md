@@ -128,3 +128,4 @@
 + [二叉树最底层最左边的值](/app/codes/2/findBottomLeftValue.md)
 + [二叉树的右侧视图](/app/codes/2/rightSideView.md)
 + [二叉树剪枝](/app/codes/2/pruneTree.md)
++ [从根节点到叶节点的路径数字之和](/app/codes/2/sumNumbers.md)
