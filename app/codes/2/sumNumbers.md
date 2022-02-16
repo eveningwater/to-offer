@@ -82,7 +82,7 @@ var dfs = function(node,prevSum){
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。。
+* 时间复杂度：O(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。
 * 空间复杂度：O(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为 O(n)。
 
 [更多思路](https://leetcode-cn.com/problems/3Etpl5/solution/cong-gen-jie-dian-dao-xie-jie-dian-de-lu-nv9q/)。
