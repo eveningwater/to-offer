@@ -130,3 +130,4 @@
 + [二叉树剪枝](/app/codes/2/pruneTree.md)
 + [从根节点到叶节点的路径数字之和](/app/codes/2/sumNumbers.md)
 + [向下的路径节点之和](/app/codes/2/pathSum.md)
++ [节点之和最大的路径](/app/codes/2/maxPathSum.md)
