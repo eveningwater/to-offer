@@ -131,3 +131,4 @@
 + [从根节点到叶节点的路径数字之和](/app/codes/2/sumNumbers.md)
 + [向下的路径节点之和](/app/codes/2/pathSum.md)
 + [节点之和最大的路径](/app/codes/2/maxPathSum.md)
++ [展平二叉搜索树](/app/codes/2/increasingBST.md)
