@@ -132,3 +132,4 @@
 + [向下的路径节点之和](/app/codes/2/pathSum.md)
 + [节点之和最大的路径](/app/codes/2/maxPathSum.md)
 + [展平二叉搜索树](/app/codes/2/increasingBST.md)
++ [二叉搜索树中的中序后继](/app/codes/2/inorderSuccessor.md)
