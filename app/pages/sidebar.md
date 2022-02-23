@@ -128,3 +128,4 @@
 + [所有大于等于节点的值之和](/codes/2/convertBST.md)
 + [二叉搜索树迭代器](/codes/2/BSTIterator.md)
 + [二叉搜索树中两个节点之和](/codes/2/findTarget.md)
++ [值和下标之差都在给定的范围内](/codes/2/containsNearbyAlmostDuplicate.md)
