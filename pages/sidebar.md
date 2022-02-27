@@ -132,3 +132,4 @@
 + [日程表](/codes/2/MyCalendar.md)
 + [数据流的第 K 大数值](/codes/2/KthLargest.md)
 + [出现频率最高的 k 个数字](/codes/2/topKFrequent.md)
++ [和最小的 k 个数对](/codes/2/kSmallestPairs.md)
