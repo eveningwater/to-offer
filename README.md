@@ -141,3 +141,4 @@
 + [数据流的第 K 大数值](/codes/2/KthLargest.md)
 + [出现频率最高的 k 个数字](/codes/2/topKFrequent.md)
 + [和最小的 k 个数对](/codes/2/kSmallestPairs.md)
++ [实现前缀树](/codes/2/Trie.md)
