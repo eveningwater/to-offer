@@ -142,3 +142,6 @@
 + [出现频率最高的 k 个数字](/app/codes/2/topKFrequent.md)
 + [和最小的 k 个数对](/app/codes/2/kSmallestPairs.md)
 + [实现前缀树](/app/codes/2/Trie.md)
++ [替换单词](/app/codes/2/replaceWords.md)
++ [神奇的字典](/app/codes/2/magicDictionary.md)
++ [最短的单词编码](/app/codes/2/minimumLengthEncoding.md)
