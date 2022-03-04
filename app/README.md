@@ -145,3 +145,4 @@
 + [替换单词](/codes/2/replaceWords.md)
 + [神奇的字典](/codes/2/magicDictionary.md)
 + [最短的单词编码](/codes/2/minimumLengthEncoding.md)
++ [单词之和](/codes/2/mapSum.md)
