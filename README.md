@@ -146,3 +146,4 @@
 + [神奇的字典](/app/codes/2/magicDictionary.md)
 + [最短的单词编码](/app/codes/2/minimumLengthEncoding.md)
 + [单词之和](/app/codes/2/mapSum.md)
++ [最大的异或](/app/codes/2/findMaximumXOR.md)
