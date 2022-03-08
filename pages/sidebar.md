@@ -139,3 +139,6 @@
 + [最短的单词编码](/codes/2/minimumLengthEncoding.md)
 + [单词之和](/codes/2/mapSum.md)
 + [最大的异或](/codes/2/findMaximumXOR.md)
++ [查找插入位置](/codes/2/searchInsert.md)
++ [山峰数组的顶部](/codes/2/peakIndexInMountainArray.md)
++ [排序数组中只出现一次的数字](/codes/2/singleNonDuplicate.md)
