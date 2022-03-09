@@ -150,3 +150,4 @@
 + [查找插入位置](/app/codes/2/searchInsert.md)
 + [山峰数组的顶部](/app/codes/2/peakIndexInMountainArray.md)
 + [排序数组中只出现一次的数字](/app/codes/2/singleNonDuplicate.md)
++ [按权重生成随机数](/app/codes/2/solution.md)
