@@ -143,3 +143,6 @@
 + [山峰数组的顶部](/codes/2/peakIndexInMountainArray.md)
 + [排序数组中只出现一次的数字](/codes/2/singleNonDuplicate.md)
 + [按权重生成随机数](/codes/2/solution.md)
++ [求平方根](/codes/2/mySqrt.md)
++ [狒狒吃香蕉](/codes/2/minEatingSpeed.md)
++ [合并区间](/codes/2/merge.md)
