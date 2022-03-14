@@ -155,3 +155,4 @@
 + [狒狒吃香蕉](/app/codes/2/minEatingSpeed.md)
 + [合并区间](/app/codes/2/merge.md)
 + [数组相对排序](/app/codes/2/relativeSortArray.md)
++ [数组中的第k大的数字](/app/codes/2/findKthLargest.md)
