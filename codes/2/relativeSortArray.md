@@ -24,7 +24,7 @@
 
 
 
-> 注意：本题与[主站 1122 题](https://leetcode-cn.com/problems/relative-sort-array/ )相同。
+> 注意：本题与[主站 1122 题](https://leetcode-cn.com/problems/relative-sort-array/)相同。
 
 ### 思路分析
 
