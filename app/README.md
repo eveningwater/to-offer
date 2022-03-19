@@ -156,3 +156,8 @@
 + [合并区间](/codes/2/merge.md)
 + [数组相对排序](/codes/2/relativeSortArray.md)
 + [数组中的第k大的数字](/codes/2/findKthLargest.md)
++ [链表排序](/codes/2/sortList.md)
++ [合并排序链表](/codes/2/mergeKLists.md)
++ [所有子集](/codes/2/subsets.md)
++ [含有 k 个元素的组合](/codes/2/combine.md)
++ [允许重复选择元素的组合](/codes/2/combinationSum.md)
