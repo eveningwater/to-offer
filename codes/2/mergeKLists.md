@@ -44,6 +44,29 @@
 
 ### 思路分析
 
+本题如果没有思路，我们可以先考虑如何去合并两个排序链表？如果我们合并了两个排序链表，那么我们再遍历整个链表数组，就可以合并所有链表了。那么问题来了，如何去合并两个排序的链表。我们可以从上一题中获取答案[链表排序](/codes/2/sortList.md)，可以看到我们实际上就是创建一个空的链表，然后分别遍历两个排序链表，依次比较大小，就可以合并两个排序链表了。代码如下:
+
+```js
+var merge = function(x,y){
+    let head = new ListNode(-1),
+        res = head;
+    while(x !== null && y !== null){
+        if(x.val < y.val){
+            res.next = x;
+            x = x.next;
+        }else{
+            res.next = y;
+            y = y.next;
+        }
+        res = res.next;
+    }
+    res.next = x !== null ? x : y;
+    return head.next;
+}
+```
+
+明白了如何去合并两个排序链表，接下来，我们就可以遍历链表数组去合并整个链表了。完整代码如下:
+
 代码如下:
 
 ```js
@@ -54,19 +77,39 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+var merge = function(x,y){
+    let head = new ListNode(-1),
+        res = head;
+    while(x !== null && y !== null){
+        if(x.val < y.val){
+            res.next = x;
+            x = x.next;
+        }else{
+            res.next = y;
+            y = y.next;
+        }
+        res = res.next;
+    }
+    res.next = x !== null ? x : y;
+    return head.next;
+}
 /**
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
 var mergeKLists = function(lists) {
-
+    let x = null;
+    for(const y of lists){
+        x = merge(x,y);
+    }
+    return x;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(m * n)。
+* 空间复杂度：O(n)。
 
-[更多思路](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/solution/mian-shi-ti-25-he-bing-liang-ge-pai-xu-de-lian-b-2/)。
+[更多思路](https://leetcode-cn.com/problems/vvXgSW/solution/cpython3java-1bian-li-zhu-ge-he-bing-2-b-xngx/)。
 
