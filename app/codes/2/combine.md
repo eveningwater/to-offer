@@ -34,6 +34,7 @@
 
 ### 思路分析
 
+本题和上一题类似，借鉴上一题[所有子集](/codes/2/subsets.md)的深度优先搜索算法，结合剪枝，我们就可以完成本题的解答。
 
 ```js
 /**
@@ -42,13 +43,29 @@
  * @return {number[][]}
  */
 var combine = function(n, k) {
-
+    const res = [];
+    const dfs = (index,k,list) => {
+        //剪枝情况
+        if(n - index + 1 < k){
+            return;
+        }
+        if(k === 0){
+            res.push(list.slice());
+            return;
+        }
+        list.push(index);
+        dfs(index + 1,k - 1,list);
+        list.pop();
+        dfs(index + 1,k,list);
+    }
+    dfs(1,k,[]);
+    return res;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
 
-[更多思路](https://leetcode-cn.com/problems/7WHec2/solution/yi-bu-bu-jiang-kong-jian-fu-za-du-cong-o-oxes/)。
+[更多思路](https://leetcode-cn.com/problems/uUsW3B/solution/java-shen-du-you-xian-sou-suo-dfsyu-jian-qx47/)。
