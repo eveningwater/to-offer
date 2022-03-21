@@ -35,6 +35,7 @@
 
 ### 思路分析
 
+本题和上一题类似，借鉴上一题[允许重复选择元素的组合](/app/codes/2/combinationSum.md)的深度优先搜索算法，我们只需要用一个数组来判定元素是否重复即可。
 
 ```js
 /**
@@ -42,13 +43,34 @@
  * @return {number[][]}
  */
 var permute = function(nums) {
-
+    const res = [],
+          track = [],
+          used = new Array(nums.length).fill(false);
+    const dfs = () => {
+        if(track.length === nums.length){
+            res.push(track.slice());
+            return;
+        }
+        for(let i = 0;i < nums.length;i++){
+            //判断如果元素存在，则跳过
+            if(used[i]){
+                continue;
+            }
+            track.push(nums[i]);
+            used[i] = true;
+            dfs();
+            track.pop();
+            used[i] = false;
+        }
+    }
+    dfs();
+    return res;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：。
-* 空间复杂度：。
+* 时间复杂度：O(n ^ 2)。
+* 空间复杂度：O(n)。
 
-[更多思路](https://leetcode-cn.com/problems/7WHec2/solution/yi-bu-bu-jiang-kong-jian-fu-za-du-cong-o-oxes/)。
+[更多思路](https://leetcode-cn.com/problems/VvJkup/solution/pei-yang-chou-xiang-neng-li-java-cpython-u88o/)。
