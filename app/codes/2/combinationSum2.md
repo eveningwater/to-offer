@@ -77,7 +77,7 @@ var combinationSum2 = function(candidates, target) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O(n ^ 2)。
+* 时间复杂度：O(n * n!)。
 * 空间复杂度：O(n)。
 
 [更多思路](https://leetcode-cn.com/problems/4sjJUc/solution/java-hui-su-jian-zhi-jiao-ni-ru-he-bi-mi-nx9y/)。
