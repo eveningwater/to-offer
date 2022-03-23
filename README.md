@@ -164,3 +164,4 @@
 + [含有重复元素集合的组合](/app/codes/2/combinationSum2.md)
 + [没有重复元素集合的全排列](/app/codes/2/permute.md)
 + [含有重复元素集合的全排列](/app/codes/2/permuteUnique.md)
++ [含有重复元素集合的全排列](/app/codes/2/generateParenthesis.md)
