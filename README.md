@@ -166,3 +166,4 @@
 + [含有重复元素集合的全排列](/app/codes/2/permuteUnique.md)
 + [生成匹配的括号](/app/codes/2/generateParenthesis.md)
 + [分割回文子字符串](/app/codes/2/partition.md)
++ [复原IP](/app/codes/2/restoreIpAddresses.md)
