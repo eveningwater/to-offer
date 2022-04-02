@@ -163,3 +163,5 @@
 + [允许重复选择元素的组合](/codes/2/combinationSum.md)
 + [含有重复元素集合的组合](/codes/2/combinationSum2.md)
 + [没有重复元素集合的全排列](/codes/2/permute.md)
++ [含有重复元素集合的全排列](/codes/2/permuteUnique.md)
++ [生成匹配的括号](/codes/2/generateParenthesis.md)
