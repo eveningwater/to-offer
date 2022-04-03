@@ -159,3 +159,5 @@
 + [生成匹配的括号](/codes/2/generateParenthesis.md)
 + [分割回文子字符串](/codes/2/partition.md)
 + [复原IP](/codes/2/restoreIpAddresses.md)
++ [爬楼梯的最少成本](/codes/2/minCostClimbingStairs.md)
++ [房屋偷盗](/codes/2/rob.md)
