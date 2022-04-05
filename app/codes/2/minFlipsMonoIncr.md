@@ -60,4 +60,30 @@ var minFlipsMonoIncr = function(s) {
 * 时间复杂度：O(n)。
 * 空间复杂度：O(1)。
 
+当然本题还可以使用动态规划的算法来解决，我们只需要遍历每一个字符，然后判断是否是0，如果等于0，则需要知道是将0字符前面全为1的字符反转为0还是将当前字符反转为1哪个次数少，就取哪个。
+
+```js
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var minFlipsMonoIncr = function(s) {
+    let one = 0,dp = 0;
+    for(let i = 0;i < s.length;i++){
+        const char = s.charAt(i);
+        if(char === "0"){
+            dp = Math.min(one,dp + 1);
+        }else{
+            one++;
+        }
+    }
+    return dp;
+};
+```
+
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n)。
+* 空间复杂度：O(1)。
+
 [更多思路](https://leetcode-cn.com/problems/cyJERH/solution/jian-zhi-offer-2-mian-shi-ti-92-shu-zhon-4oz8/)。
