@@ -171,3 +171,4 @@
 + [房屋偷盗](/app/codes/2/rob.md)
 + [环形房屋偷盗](/app/codes/2/ringRob.md)
 + [粉刷房子](/app/codes/2/minCost.md)
++ [翻转字符](/app/codes/2/minFlipsMonoIncr.md)

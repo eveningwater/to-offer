@@ -170,3 +170,4 @@
 + [爬楼梯的最少成本](/codes/2/minCostClimbingStairs.md)
 + [房屋偷盗](/codes/2/rob.md)
 + [环形房屋偷盗](/codes/2/ringRob.md)
++ [翻转字符](/codes/2/minFlipsMonoIncr.md)
