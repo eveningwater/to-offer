@@ -172,3 +172,5 @@
 + [环形房屋偷盗](/app/codes/2/ringRob.md)
 + [粉刷房子](/app/codes/2/minCost.md)
 + [翻转字符](/app/codes/2/minFlipsMonoIncr.md)
++ [最长斐波那契数列](/app/codes/2/lenLongestFibSubseq.md)
++ [最少回文分割](/app/codes/2/minCut.md)
