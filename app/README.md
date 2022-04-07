@@ -173,3 +173,4 @@
 + [翻转字符](/codes/2/minFlipsMonoIncr.md)
 + [最长斐波那契数列](/codes/2/lenLongestFibSubseq.md)
 + [最少回文分割](/codes/2/minCut.md)
++ [最长公共子序列](/codes/2/longestCommonSubsequence.md)
