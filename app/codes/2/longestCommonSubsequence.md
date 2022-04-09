@@ -75,6 +75,7 @@
  * @param {string} text1
  * @param {string} text2
  * @return {number}
+ * 
  */
 var longestCommonSubsequence = function(text1, text2) {
     const m = text1.length,n = text2.length;
@@ -91,6 +92,7 @@ var longestCommonSubsequence = function(text1, text2) {
         }
     }
     return dp[m][n];
+}
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
