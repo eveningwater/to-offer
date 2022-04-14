@@ -48,7 +48,7 @@
 
 ### 思路分析
 
-
+记s1的长度为n,s2的长度为m,s3的长度为t,首先我们需要知道，如果m + n !== t,则代表s3必然不可能由s1和s2交织而成，只有满足当m + n = t的时候，才会有可能出现交织。本题我们同样可以使用动态规划来解题，但是动态规划找到状态转移方程很难，我们可以采用回溯算法来解答。首先我们可以使用三个指针同时代表三个字符串的每一个字符，如果s1当前字符与s3当前字符相等，则s1和s3的下标同时加1，如果s2当前字符与s3当前字符相等，则s2和s3的下标同时加1，如果最终三个指针能走到最后，就代表可以交织，返回true。当然我们需要注意，就是在回溯的过程中，难免会有重复的访问路径，因此，我们可以使用哈希表来存储访问路径，如果已经访问过，则直接退出。
 
 
 ```js
@@ -59,14 +59,35 @@
  * @return {boolean}
  */
 var isInterleave = function(s1, s2, s3) {
-
+    const m = s1.length,n = s2.length,t = s3.length;
+    if(m = n !== t){
+        return false;
+    }
+    let res = false,visited = new Set();
+    function backtrace(i1,i2,i3){
+        if(i1 === m && i2 === n && i3 === t){
+            return res = true;
+        }
+        if(visited.has(`${i1}-${i2}-${i3}`)){
+            return false;
+        }
+        visited.add(`${i1}-${i2}-${i3}`);
+        if(s1[i1] === s3[i3]){
+            backtrace(i1 + 1,i2,i3 + 1);
+        }
+        if(s2[i2] === s3[i3]){
+            backtrace(i1,i2 + 1,i3 + 1);
+        }
+    }
+    backtrace(0,0,0);
+    return res;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O()。
-* 空间复杂度：O()。
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
 
 
-[更多思路](https://leetcode-cn.com/problems/qJnOS7/solution/zui-chang-gong-gong-zi-xu-lie-by-leetcod-ugg7/)。
+[更多思路](https://leetcode-cn.com/problems/IY6buf/solution/zi-fu-chuan-jiao-zhi-by-leetcode-solutio-i4ni/)。
