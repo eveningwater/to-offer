@@ -100,8 +100,8 @@ var numDistinct = function(s, t) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O()。
-* 空间复杂度：O()。
+* 时间复杂度：O(m * n)其中 m 和 n 分别是字符串 s 和 t 的长度。二维数组 dp 有 m+1 行和 n+1 列，需要对dp中的每个元素进行计算。
+* 空间复杂度：O(m * n)其中 m 和 n 分别是字符串 s 和 t 的长度。创建了 m+1 行 n+1 列的二维数组dp。
 
 
 [更多思路](https://leetcode-cn.com/problems/21dk04/solution/zi-xu-lie-de-shu-mu-by-leetcode-solution-l8v1/)。
