@@ -177,3 +177,4 @@
 + [最长公共子序列](/app/codes/2/longestCommonSubsequence.md)
 + [字符串交织](/app/codes/2/isInterleave.md)
 + [子序列的数目](/app/codes/2/numDistinct.md)
++ [路径的数目](/app/codes/2/uniquePaths.md)
