@@ -173,3 +173,4 @@
 + [三角形中最小路径之和](/codes/2/minimumTotal.md)
 + [分割等和子集](/codes/2/canPartition.md)
 + [加减的目标值](/codes/2/findTargetSumWays.md)
++ [最少的硬币数目](/codes/2/coinChange.md)
