@@ -182,3 +182,4 @@
 + [分割等和子集](/codes/2/canPartition.md)
 + [加减的目标值](/codes/2/findTargetSumWays.md)
 + [最少的硬币数目](/codes/2/coinChange.md)
++ [排列的数目](/codes/2/combinationSum4.md)
