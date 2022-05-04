@@ -185,3 +185,4 @@
 + [最少的硬币数目](/app/codes/2/coinChange.md)
 + [排列的数目](/app/codes/2/combinationSum4.md)
 + [岛屿的最大面积](/app/codes/2/maxAreaOfIsland.md)
++ [二分图](/app/codes/2/isBipartite.md)
