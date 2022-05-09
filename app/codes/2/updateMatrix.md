@@ -113,7 +113,7 @@
  */
 var updateMatrix = function(mat) {
     const m = mat.length,n = mat[0].length,
-          dirs = [[-1,0],[1,0],[0,1],[0,-1]]
+          dirs = [[-1,0],[1,0],[0,1],[0,-1]],
           res = new Array(m).fill(0).map(() => new Array(n).fill(0)),
           queue = [];
     for(let i = 0;i < m;i++){
