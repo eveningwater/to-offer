@@ -188,3 +188,4 @@
 + [二分图](/app/codes/2/isBipartite.md)
 + [矩阵中的距离](/app/codes/2/updateMatrix.md)
 + [单词演变](/app/codes/2/ladderLength.md)
++ [开密码锁](/app/codes/2/openLock.md)
