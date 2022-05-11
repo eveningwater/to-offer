@@ -180,3 +180,4 @@
 + [矩阵中的距离](/codes/2/updateMatrix.md)
 + [单词演变](/codes/2/ladderLength.md)
 + [开密码锁](/codes/2/openLock.md)
++ [所有路径](/codes/2/allPathsSourceTarget.md)
