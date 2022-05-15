@@ -182,3 +182,4 @@
 + [开密码锁](/codes/2/openLock.md)
 + [所有路径](/codes/2/allPathsSourceTarget.md)
 + [计算除法](/codes/2/calcEquation.md)
++ [最长递增路径](/codes/2/longestIncreasingPath.md)
