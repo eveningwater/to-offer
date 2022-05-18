@@ -193,3 +193,5 @@
 + [计算除法](/app/codes/2/calcEquation.md)
 + [最长递增路径](/app/codes/2/longestIncreasingPath.md)
 + [课程顺序](/app/codes/2/findOrder.md)
++ [外星文字典](/app/codes/2/alienOrder.md)
++ [重建序列](/app/codes/2/sequenceReconstruction.md)
