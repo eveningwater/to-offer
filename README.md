@@ -192,3 +192,5 @@
 + [计算除法](/codes/2/calcEquation.md)
 + [最长递增路径](/codes/2/longestIncreasingPath.md)
 + [课程顺序](/codes/2/findOrder.md)
++ [外星文字典](/codes/2/alienOrder.md)
++ [重建序列](/codes/2/sequenceReconstruction.md)
