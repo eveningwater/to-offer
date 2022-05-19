@@ -46,6 +46,8 @@
 
 ### 思路分析
 
+本题实际上也还是构建图，遍历图的问题。根据题意，原始序列需要是唯一能被重建的，因此我们可以构建哈希表来确定图中的每一个节点在拓扑排序后的序列是否与原始序列相等。然后确定了之后，我们就可以构建图哈希表以及入度数组来计算每个节点的入度。接着我们定义一个队列，以及一个结果数组，将入度为0节点添加到队列中。然后我们开始遍历队列，当队列的长度不为1，也是不会存在重建后的序列与原始序列相等的，所以直接返回false。然后依次将下一个入度为0的节点添加到队列中，直到遍历每一个节点完成，我们用一个数组来存储遍历的每一个节点，最后只需要比较这个数组是否与原始序列相等即可。代码如下:
+
 ```js
 /**
  * @param {number[]} org
@@ -53,13 +55,67 @@
  * @return {boolean}
  */
 var sequenceReconstruction = function(org, seqs) {
-
+    // 构建哈希表确定seqs的创建序列的唯一性
+    const set = new Set(),n = org.length;
+    for(const seq of seqs){
+        for(const num of seq){
+            set.add(num);
+        }
+    }
+    // 如果序列元素只有1个，并且哈希表中不存在该元素，或者哈希表的大小不等于序列的长度，则代表没有符合条件的
+    if((n === 1 && !set.has(n))|| set.size !== n){
+        return false;
+    }
+    // 构建图和入度数组
+    const graph = new Map(),
+          inDegree = new Array(n + 1).fill(0);
+    for(let i = 1;i <= n;i++){
+        graph.set(i,new Set());
+    }
+    // 添加图节点，并计算每个节点的入度
+    for(const seq of seqs){
+        for(let i = 0;i < seq.length - 1;i++){
+            if(!graph.get(seq[i]).has(seq[i + 1])){
+                graph.get(seq[i]).add(seq[i + 1]);
+                inDegree[seq[i + 1]]++;
+            }
+        }
+    }
+    // 定义队列和结果列表
+    const queue = [],list = [];
+    // 将入度为0的节点添加到队列当中
+    for(let i = 1;i <= n;i++){
+        if(inDegree[i] === 0){
+            queue.push(i);
+        }
+    }
+    while(queue.length){
+        // 如果队列的长度不为1，则不满足条件
+        if(queue.length !== 1){
+            return false;
+        }
+        // 出队
+        const cur = queue.shift();
+        list.push(cur);
+        // 如果图中不存在该节点，则跳过
+        if(!graph.get(cur)){
+            continue;
+        }
+        for(const n of graph.get(cur)){
+            inDegree[n]--;
+            // 下一个节点的入度为0，则添加到队列中
+            if(inDegree[n] === 0){
+                queue.push(n);
+            }
+        }
+    }
+    return list.toString() === org.toString();
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O()。
-* 空间复杂度：O()。
+* 时间复杂度：O(v * e),其中v为序列org的长度,e为构建图的边数O(sum(seqs[i].length))。
+* 空间复杂度：O(v * e)。
 
-[更多思路](https://leetcode.cn/problems/QA2IGt/solution/ke-cheng-shun-xu-by-leetcode-solution-mq6d/)。
+[更多思路](https://leetcode.cn/problems/ur2n8P/solution/tuo-bu-pai-xu-que-ding-wei-yi-chu-dui-xu-zkb5/)。

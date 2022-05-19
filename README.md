@@ -195,3 +195,4 @@
 + [课程顺序](/app/codes/2/findOrder.md)
 + [外星文字典](/app/codes/2/alienOrder.md)
 + [重建序列](/app/codes/2/sequenceReconstruction.md)
++ [省份数量](/app/codes/2/findCircleNum.md)
