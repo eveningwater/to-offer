@@ -187,3 +187,4 @@
 + [外星文字典](/codes/2/alienOrder.md)
 + [重建序列](/codes/2/sequenceReconstruction.md)
 + [省份数量](/codes/2/findCircleNum.md)
++ [相似的字符串](/codes/2/numSimilarGroups.md)
