@@ -39,6 +39,7 @@
 
 ### 思路分析
 
+根据题意，我们可以把每一个城市看做是图当中的节点，城市与城市之间的相连就是连接每个图节点的边，要计算出省份的数量，实际上就是计算出城市与城市之间相连的边的数量。遍历图，我们可以使用深度优先搜索算法和广度优先搜索算法来解答，因此本题的解题思路也就很好理解了。
 
 ```js
 /**
@@ -46,13 +47,30 @@
  * @return {number}
  */
 var findCircleNum = function(isConnected) {
-
+    const cities = isConnected.length,
+          visited = new Set();
+    let provinces = 0;
+    const dfs = (i) => {
+        for(let j = 0;j < cities;j++){
+            if(!visited.has(j) && isConnected[i][j] === 1){
+                visited.add(j);
+                dfs(j);
+            }
+        }
+    }
+    for(let i = 0;i < cities;i++){
+        if(!visited.has(i)){
+            dfs(i);
+            provinces++;
+        }
+    }
+    return provinces;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O()。
-* 空间复杂度：O()。
+* 时间复杂度：O(n ^ 2),其中 n 是城市的数量。需要遍历矩阵 n 中的每个元素。
+* 空间复杂度：O(n)其中 n 是城市的数量。需要使用数组 visited 记录每个城市是否被访问过，数组长度是 n，递归调用栈的深度不会超过 n。
 
 [更多思路](https://leetcode.cn/problems/bLyHh0/solution/sheng-fen-shu-liang-by-leetcode-solution-c8b8/)。
