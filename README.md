@@ -196,3 +196,5 @@
 + [重建序列](/codes/2/sequenceReconstruction.md)
 + [省份数量](/codes/2/findCircleNum.md)
 + [相似的字符串](/codes/2/numSimilarGroups.md)
++ [多余的边](/codes/2/findRedundantConnection.md)
++ [最长连续序列](/codes/2/longestConsecutive.md)
