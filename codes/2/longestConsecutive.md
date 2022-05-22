@@ -28,6 +28,7 @@
 
 ### 思路分析
 
+本题我们可以尝试将数组按照从小到大排序，然后利用set去重，接着遍历计算连续数的个数这里，我们需要额外建立一个变量来确定是否是最大的连续数列，因为我们遍历连续数列的个数不一定是最大的连续数列的个数。
 
 ```js
 /**
@@ -35,13 +36,30 @@
  * @return {number}
  */
 var longestConsecutive = function(nums) {
-
+    const newNums = [...new Set(nums.sort((a,b) => a - b))];
+    if(newNums.length === 0){
+        return 0;
+    }
+    let count = 1,
+        res = 0;
+    for(let i = 0;i < newNums.length - 1;i++){
+        if(newNums[i] === newNums[i + 1] - 1){
+            count++;
+        }else{
+            if(count > res){
+                res = count;
+            }
+            //重置为1，相当于就是重新统计连续子数列的个数
+            count = 1;
+        }
+    }
+    return Math.max(res,count);
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O()。
-* 空间复杂度：O()。
+* 时间复杂度：O(n * log<sup>n</sup>),其中n为数组nums的长度，时间复杂度实际上就是看排序的时间复杂度。
+* 空间复杂度：O(n),需要使用长度为n的数组存储去重排序后的数组。
 
-[更多思路](https://leetcode.cn/problems/bLyHh0/solution/sheng-fen-shu-liang-by-leetcode-solution-c8b8/)。
+[更多思路](https://leetcode.cn/problems/WhsWhI/solution/zui-chang-lian-xu-xu-lie-by-leetcode-sol-z8jk/)。
