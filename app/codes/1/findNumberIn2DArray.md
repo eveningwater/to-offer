@@ -43,12 +43,11 @@ var findNumberIn2DArray = function (matrix, target) {
   }
 };
 ```
+
 以上算法的时间复杂度和空间复杂度分析如下:
 
-由于要执行 2 个循环，所以这个算法的时间复杂度为 O(n^2),每次都会访问 n 次变量，所以空间复杂度为 O(n)。
-
-* 时间复杂度O(n ^ 2)。
-* 空间复杂度O(n)。
+* 时间复杂度：O(n * m)。二维数组中的每个元素都被遍历，因此时间复杂度为二维数组的大小。
+* 空间复杂度：O(1)。
 
 - 方法二:线性算法
 
@@ -82,9 +81,8 @@ var findNumberIn2DArray = function (matrix, target) {
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-由于程序只有一个循环只运行n次，然后根据条件最多在循环里执行m次，因此时间复杂度为O(m + n),其中m可忽略不计，时间复杂度就变成了O(n),而空间复杂度仍然是O(n)。
+* 时间复杂度：O(n + m)。访问到的下标的行最多增加 n 次，列最多减少 m 次，因此循环体最多执行 n + m 次。
+* 空间复杂度：O(1)。
 
-* 时间复杂度O(n)。
-* 空间复杂度O(n)。
 
 [更多思路](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solution/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/)。
