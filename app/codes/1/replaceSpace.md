@@ -23,7 +23,10 @@ var replaceSpace = function (s) {
 };
 ```
 
-由于程序只执行一次，所以这个算法的时间复杂度为 O(1),每次都会访问1次字符串，所以空间复杂度为 O(1)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(1)。
+* 空间复杂度：O(1)。
 
 - 方法二:字符数组
 
@@ -46,7 +49,31 @@ var replaceSpace = function (s) {
     // 从0开始截取到index索引的字符数组即为替换后的字符串，然后调用join方法转成字符串，注意这里的参数必须是空字符串。
     return array.slice(0,index).join("");
 };
+// /**
+//  * @param {string} s
+//  * @return {string}
+//  */
+// var replaceSpace = function(s) {
+//     const arr = [];
+//     let count = 0;
+//     for(const char of s){
+//         if(char === " "){
+//             arr[count] = "%";
+//             arr[count + 1] = "2";
+//             arr[count + 2] = "0";
+//             count += 3;
+//         }else{
+//             arr[count] = char;
+//             count++;
+//         }
+//     }
+//     return arr.join("");
+// };
 ```
 
-由于用到了一个循环，所以时间复杂度为O(n),而且用了一个数组来存储，所以空间复杂度也为O(n)。
+以上算法的时间复杂度和空间复杂度分析如下:
 
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
+
+[更多思路](https://leetcode.cn/problems/ti-huan-kong-ge-lcof/solution/mian-shi-ti-05-ti-huan-kong-ge-by-leetcode-solutio/)。
