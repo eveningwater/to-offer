@@ -53,6 +53,11 @@ var buildTree = function (preorder,inorder) {
 };
 ```
 
-由于用到了2个递归，所以这个算法的时间复杂度为 O(n^2),而空间复杂度为 O(1)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
+
+[更多思路](https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/solution/mian-shi-ti-07-zhong-jian-er-cha-shu-by-leetcode-s/)。
 
 
