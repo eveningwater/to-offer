@@ -47,7 +47,13 @@ var fib = function(n) {
 
 ```
 
-以上算法的时间复杂度和空间复杂度见下图:
+
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(2 ^ n)。
+* 空间复杂度：O(n)。
+
+具体分析如下图所示:
 
 ![递归法](../../images/fib-2.png)
 
@@ -71,18 +77,26 @@ var fib = function(n) {
 ![](../../images/fib-1.png)
 
 ```js
-  var fib = function(n){
-      let a = 0,b = 1,sum;
-      for(let i = 0;i < n;i++){
-          sum = (a + b) % 1000000007;
-          a = b;
-          b = sum;
-      }
-      return a;
-  }
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function(n) {
+    let a = 0,b = 1,sum;
+    for(let i = 0;i < n;i++){
+        sum = (a + b) % 1000000007;
+        a = b;
+        b = sum;
+    }
+    return a;
+};
 ```
 
-以上算法时间复杂度 O(N)： 计算 f(n)需循环 n 次，每轮循环内计算操作使用 O(1) 。空间复杂度 O(1) ： 几个标志变量使用常数大小的额外空间。
+以上算法的时间复杂度和空间复杂度分析如下:
 
-更多解法见[精选答案](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/solution/mian-shi-ti-10-i-fei-bo-na-qi-shu-lie-dong-tai-gui/)。
+* 时间复杂度：O(n), 计算 f(n)需循环 n 次，每轮循环内计算操作使用 O(1) 。
+* 空间复杂度：O(1), 几个标志变量使用常数大小的额外空间。
+
+[更多思路](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/solution/mian-shi-ti-10-i-fei-bo-na-qi-shu-lie-dong-tai-gui/)。
+
 
