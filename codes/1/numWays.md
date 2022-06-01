@@ -27,7 +27,7 @@
 
 实际上本题就是斐波那契数列的一个应用题，详细解法已经在斐波那契数列一题中讲到过，可参考[斐波那契数列](/codes/1/fib),当然这里唯一需要注意的一点就是当 n 为 0 的时候需要返回值 1，所以需要加一个判断条件。代码如下所示:
 
--递归法
+- 递归法
 
 ```js
 var numWays = function (n) {
@@ -39,7 +39,13 @@ var numWays = function (n) {
 };
 ```
 
-- 动态规范
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
+
+
+- 动态规划
 
 ```js
 var numWays = function (n) {
@@ -55,3 +61,10 @@ var numWays = function (n) {
   return i;
 };
 ```
+
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n), 计算 f(n)需循环 n 次，每轮循环内计算操作使用 O(1) 。
+* 空间复杂度：O(1), 几个标志变量使用常数大小的额外空间。
+
+[更多思路](https://leetcode.cn/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/solution/mian-shi-ti-10-ii-qing-wa-tiao-tai-jie-wen-ti-dong/)。
