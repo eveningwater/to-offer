@@ -67,6 +67,10 @@ var movingCount = function(m, n, k) {
 };
 ```
 
-由于用到了一个循环，所以这个算法的时间复杂度为 O(n),用了一个数组存储，所以空间复杂度为 O(n)。
+以上算法的时间复杂度和空间复杂度分析如下:
 
+* 时间复杂度：O(n)。
+* 空间复杂度：O(n)。
+
+[更多思路](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/solution/ji-qi-ren-de-yun-dong-fan-wei-by-leetcode-solution/)。
 
