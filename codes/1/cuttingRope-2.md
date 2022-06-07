@@ -66,7 +66,11 @@ var cuttingRope = function (n) {
     return dp[n - 1] % (1000000007n);
 };
 ```
-由于用到了2个循环，所以这个算法的时间复杂度为 O(n ^ 2),用了一个数组存储，所以空间复杂度为 O(n)。
+
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n ^ 2)。
+* 空间复杂度：O(n)。
 
 - 方法二:贪心算法
 
@@ -125,6 +129,11 @@ var cuttingRope = function(n) {
 };
 ```
 
-以上算法用了一个循环，所以时间复杂度为O(n),空间复杂度也为O(1)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n)。
+* 空间复杂度：O(1)。
+
+[更多思路](https://leetcode.cn/problems/jian-sheng-zi-ii-lcof/solution/mian-shi-ti-14-ii-jian-sheng-zi-iitan-xin-er-fen-f/)。
 
 
