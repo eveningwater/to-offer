@@ -40,6 +40,11 @@ var hammingWeight = function (n) {
 };
 ```
 
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(1)。
+* 空间复杂度：O(1)。
+
 - 方法二:正则表达式
 
 ```js
@@ -49,7 +54,10 @@ var hammingWeight = function (n) {
 };
 ```
 
-以上两种方法的时间复杂度和空间复杂度都为O(1)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(1)。
+* 空间复杂度：O(1)。
 
 - 方法二:位操作符
 
@@ -65,7 +73,12 @@ var hammingWeight = function (n) {
 };
 ```
 
-以上算法的时间复杂度为O(n),空间复杂度为O(1)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(log<sup>n</sup>),循环次数等于 n 的二进制位中 1 的个数，最坏情况下 n 的二进制位全部为 1。我们需要循环 log<sup>n</sup> 次。
+* 空间复杂度：O(1)。
+
+[更多思路](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/solution/er-jin-zhi-zhong-1de-ge-shu-by-leetcode-50bb1/)。
 
 
 
