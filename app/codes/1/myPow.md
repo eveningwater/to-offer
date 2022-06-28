@@ -47,12 +47,18 @@
 ```js
 var myPow = function (x,n) {
     if(n === 0)return 1;
-    if(n < 0)return 1 / (x * myPow(x,-n - 1));
+    if(n < 0)return 1 / (x * myPow(x,-n));
     if(n > 0)return n % 2 === 0 ? myPow(x * x,n / 2) : x * myPow(x,n - 1);
 };
 ```
 
-递归几次就有多大的复杂度，最多递归次数是n为负数且n为奇数的时候，比n为正数且为偶数的情况多递归2次，常数级别的复杂度忽略不计；主要就看n为偶数的时候，这时最多递归次数为n的二进制位数，也就是log n(底数为2)。时间和空间复杂度都是一样，都是O(log n)。
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(log<sup>n</sup>),递归几次就有多大的复杂度，最多递归次数是n为负数且n为奇数的时候，比n为正数且为偶数的情况多递归2次，常数级别的复杂度忽略不计；主要就看n为偶数的时候，这时最多递归次数为n的二进制位数，也就是log n(底数为2)。
+* 空间复杂度：O(log n),时间和空间复杂度都是一样，都是O(log n)。
+
+
+[更多思路](https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/shu-zhi-de-zheng-shu-ci-fang-by-leetcode-yoqr/)。
 
 
 
