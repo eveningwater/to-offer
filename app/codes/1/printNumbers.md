@@ -30,3 +30,9 @@ var printNumbers = function(n) {
 
 当然我们还可以使用递归法，其实思路都是差不多的。这个算法的时间复杂度应该为O(n),因为最大可能是执行n次，而空间复杂度也是O(n)。
 
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n),因为最大可能是执行n次。
+* 空间复杂度：O(n),存储n个数,n为常数。
+
+[更多思路](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/solution/mian-shi-ti-17-da-yin-cong-1-dao-zui-da-de-n-wei-2/)。
