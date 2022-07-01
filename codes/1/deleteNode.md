@@ -59,9 +59,14 @@ var deleteNode = function(head, val) {
         prev = next;
         next = next.next;
     }
-    return next;
+    return head;
 };
 ```
 
-该算法的时间复杂度与节点数有关，例如第二个参数如果是尾部节点，则代表我们遍历了整个链表，所以时间复杂度最高应为 O(n),而空间复杂度为 O(1)。
 
+以上算法的时间复杂度和空间复杂度分析如下:
+
+* 时间复杂度：O(n),该算法的时间复杂度与节点数有关，例如第二个参数如果是尾部节点，则代表我们遍历了整个链表，所以时间复杂度最高应为 O(n)。
+* 空间复杂度：O(1)。
+
+[更多思路](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/solution/mian-shi-ti-18-shan-chu-lian-biao-de-jie-dian-sh-2/)。
