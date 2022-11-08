@@ -190,3 +190,7 @@
 + [相似的字符串](/codes/2/numSimilarGroups.md)
 + [多余的边](/codes/2/findRedundantConnection.md)
 + [最长连续序列](/codes/2/longestConsecutive.md)
+
+#### 其它分类
+
++ [累加数](/codes/3/isAdditiveNumber.md)
