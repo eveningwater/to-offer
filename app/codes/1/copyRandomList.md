@@ -85,5 +85,7 @@ var copyRandomList = function(head) {
 };
 ```
 
-以上算法，时间复杂度是O(n),空间复杂度也为O(n)。更多解题思路参考[题解](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/solution/fu-za-lian-biao-de-fu-zhi-by-leetcode-so-9ik5/)。
+以上算法，时间复杂度是O(n),空间复杂度也为O(n)。
+
+更多解题思路参考[题解](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/solution/fu-za-lian-biao-de-fu-zhi-by-leetcode-so-9ik5/)。
 

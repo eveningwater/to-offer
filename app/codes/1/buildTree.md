@@ -18,6 +18,7 @@
     /  \
    15   7
 ```
+
 > 限制：0 <= 节点个数 <= 5000
 
 ### 思路分析
@@ -38,26 +39,30 @@
  *     this.left = this.right = null;
  * }
  */
-var buildTree = function (preorder,inorder) {
-    if(preorder.length === 0)return null;
-    // 根节点
-    let rootVal = preorder[0];
-    // 当前节点
-    let curNode = new TreeNode(rootVal);
-    // 中序遍历中根节点的索引
-    let rootIndex = inorder.indexOf(rootVal);
-    // 左子树,在前序遍历中，根节点的索引为0，因此从1开始截取，从中序遍历中的索引值加1结束即得到左子树,相反则得到右子树
-    curNode.left = buildTree(preorder.slice(1,rootIndex + 1),inorder.slice(0,rootIndex));
-    curNode.right = buildTree(preorder.slice(rootIndex + 1),inorder.slice(rootIndex + 1));
-    return curNode;
+var buildTree = function (preorder, inorder) {
+  if (preorder.length === 0) return null;
+  // 根节点
+  let rootVal = preorder[0];
+  // 当前节点
+  let curNode = new TreeNode(rootVal);
+  // 中序遍历中根节点的索引
+  let rootIndex = inorder.indexOf(rootVal);
+  // 左子树,在前序遍历中，根节点的索引为0，因此从1开始截取，从中序遍历中的索引值加1结束即得到左子树,相反则得到右子树
+  curNode.left = buildTree(
+    preorder.slice(1, rootIndex + 1),
+    inorder.slice(0, rootIndex)
+  );
+  curNode.right = buildTree(
+    preorder.slice(rootIndex + 1),
+    inorder.slice(rootIndex + 1)
+  );
+  return curNode;
 };
 ```
 
 以上算法的时间复杂度和空间复杂度分析如下:
 
-* 时间复杂度：O(n)。
-* 空间复杂度：O(n)。
+- 时间复杂度：O(n)。
+- 空间复杂度：O(n)。
 
 [更多思路](https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/solution/mian-shi-ti-07-zhong-jian-er-cha-shu-by-leetcode-s/)。
-
-
